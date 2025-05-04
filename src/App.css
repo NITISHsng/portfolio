@@ -1,0 +1,63 @@
+body{
+    background-color: #1f242d;
+    /* background-color: black; */
+}
+
+.particles-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+
+@keyframes spin-slow {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  .animate-spin-slow {
+    animation: spin-slow 8s linear infinite;
+  }
+  .role {
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    left: 0;
+    -webkit-text-stroke: 0.7px #7cf03d;
+    animation: display-text 16s linear infinite;
+    animation-delay: calc(4s * var(--i));
+  }
+  
+  .role::before {
+    content: attr(data-text);
+    position: absolute;
+    width: 100%;
+    border-right: 2px solid #7cf03d;
+    color: #7cf03d;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: fill-text 4s linear infinite;
+  }
+  
+  @keyframes display-text {
+    0%, 25% {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    25%, 100% {
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
+  
+  @keyframes fill-text {
+    0%, 10% {
+      width: 0;
+    }
+    70%, 90% {
+      width: 100%;
+    }
+    100% {
+      width: 0;
+    }
+  }

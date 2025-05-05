@@ -64,7 +64,7 @@ onLetterAnimationComplete={handleAnimationComplete}
 
 I'm a &nbsp;
 <span className="relative">
-<span data-text="B.Tech&nbsp;Student" className="role" style={{ '--i': 0 }}>B.Teach&nbsp;Student</span>
+<span data-text="B.Tech&nbsp;Student" className="role" style={{ '--i': 0 }}>B.Tech&nbsp;Student</span>
 <span data-text="Learner" className="role" style={{ '--i': 1 }}>Learner</span>
 <span data-text="Youtuber" className="role" style={{ '--i': 2 }}>Youtuber</span>
 <span data-text="Web&nbsp;Developer" className="role" style={{ '--i': 3 }}>Web&nbsp;Developer</span>

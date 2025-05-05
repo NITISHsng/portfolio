@@ -8,7 +8,7 @@ const projects = [
     description:
       "A simple and responsive task manager to add, delete, and mark tasks as completed. Designed with a clean UI using vanilla JavaScript.",
     technologies: ["HTML", "CSS", "JavaScript"],
-    projectLink: "https://nitishtodoapp.netlify.app",
+    projectLink: "https://toxyz.netlify.app/",
     codeLink: "https://github.com/nitish-s/todo-app",
   },
   {
@@ -24,7 +24,7 @@ const projects = [
     description:
       "A full-stack system to manage daily meal entries, expense calculations, and reports for hostel mess. User login and real-time DB via Firebase.",
     technologies: ["React", "Tailwind CSS", "Firebase"],
-    projectLink: "https://hostelmess.netlify.app",
+    projectLink: "https://hostelmess.netlify.app/",
     codeLink: "https://github.com/nitish-s/hostel-mess",
   },
   {

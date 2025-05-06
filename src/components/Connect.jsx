@@ -11,7 +11,10 @@ import { section } from "framer-motion/client";
 
 const Connect = () => {
   return (
-    <section id="connect" className="w-11/12 flex items-center justify-center bg-transparent ">
+    <section
+      id="connect"
+      className="w-11/12 flex items-center justify-center bg-transparent "
+    >
       <div className="w-11/12 rounded-2xl ">
         <div className="flex items-center gap-3 mb-4">
           <img
@@ -28,17 +31,16 @@ const Connect = () => {
           of the platforms below.
         </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-        <a
-  href="mailto:singhanitish20022@gmail.com?subject=Let's Connect&body=Hi Nitish,%0D%0A%0D%0AI found your portfolio and would like to get in touch with you."
-  target="_blank"
-  rel="noopener noreferrer"
-  className="flex items-center gap-2 px-4 py-2 border justify-center relative border-white/10 rounded-md text-white hover:bg-white hover:text-black transition"
->
-  <Mail size={18} />
-  <span>Email</span>
-</a>
-
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-5">
+          <a
+            href="mailto:singhanitish20022@gmail.com?subject=Let's Connect&body=Hi Nitish,%0D%0A%0D%0AI found your portfolio and would like to get in touch with you."
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 px-4 py-2 border justify-center relative border-white/10 rounded-md text-white hover:bg-white hover:text-black transition"
+          >
+            <Mail size={18} />
+            <span>Email</span>
+          </a>
 
           <a
             href="https://www.linkedin.com/in/nitish-singha"

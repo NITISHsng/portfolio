@@ -9,15 +9,15 @@ const projects = [
       "A simple and responsive task manager to add, delete, and mark tasks as completed. Designed with a clean UI using vanilla JavaScript.",
     technologies: ["HTML", "CSS", "JavaScript"],
     projectLink: "https://toxyz.netlify.app/",
-    codeLink: "https://github.com/nitish-s/todo-app",
+    codeLink: "https://github.com/NITISHsng/Todo",
   },
   {
     title: "GuessKaro Game",
     description:
       "A number guessing game with coin rewards, level system, and random card generation. Real-time updates using Firebase Firestore.",
     technologies: ["HTML", "CSS", "JavaScript", "Firebase"],
-    projectLink: "https://guesskaro.netlify.app",
-    codeLink: "https://github.com/nitish-s/guesskaro",
+    projectLink: "https://guesskoro.vercel.app/",
+    codeLink: "https://github.com/NITISHsng/guessing-game",
   },
   {
     title: "Hostel Mess Management",
@@ -25,7 +25,7 @@ const projects = [
       "A full-stack system to manage daily meal entries, expense calculations, and reports for hostel mess. User login and real-time DB via Firebase.",
     technologies: ["React", "Tailwind CSS", "Firebase"],
     projectLink: "https://hostelmess.netlify.app/",
-    codeLink: "https://github.com/nitish-s/hostel-mess",
+    codeLink: "https://github.com/NITISHsng/Mess",
   },
   {
     title: "SinghaInfra",

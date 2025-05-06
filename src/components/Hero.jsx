@@ -35,13 +35,21 @@ after:content-[''] after:absolute after:top-0 after:left-0 after:w-full after:h-
 rotate-180"
         ></div>
 
-      <div className="relative bg-[#1f242d] z-[10] size-full rounded-full flex justify-center items-center overflow-hidden">
-        <img
-          src="mypic.png"
-          alt="Logo"
-          className="w-full scale-110 object-contain mix-blend-lighten absolute"
-        />
-      </div>
+<div className="relative bg-[#1f242d] z-[10] size-full rounded-full flex justify-center items-center overflow-hidden">
+  {/* Image container */}
+  <div className="relative w-full h-full">
+    {/* Image */}
+    <img
+      src="mypic2.png"
+      alt="Logo"
+      className="w-full h-full scale-110 object-contain mix-blend-lighten absolute top-0 right-2 brightness-120"
+    />
+    
+    {/* Overlay layer */}
+    <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/100 pointer-events-none" />
+  </div>
+</div>
+
     </div>
   </div>
 
@@ -65,8 +73,8 @@ onLetterAnimationComplete={handleAnimationComplete}
 I'm a &nbsp;
 <span className="relative">
 <span data-text="B.Tech&nbsp;Student" className="role" style={{ '--i': 0 }}>B.Tech&nbsp;Student</span>
-<span data-text="Learner" className="role" style={{ '--i': 1 }}>Learner</span>
-<span data-text="Youtuber" className="role" style={{ '--i': 2 }}>Youtuber</span>
+<span data-text="Tech&nbsp;Enthusiast" className="role" style={{ '--i': 1 }}>Tech&nbsp;Enthusiast</span>
+<span data-text="Problem&nbsp;Solver" className="role" style={{ '--i': 2 }}>Problem&nbsp;Solver </span>
 <span data-text="Web&nbsp;Developer" className="role" style={{ '--i': 3 }}>Web&nbsp;Developer</span>
 </span>
 </h2>
@@ -100,25 +108,25 @@ I'm a &nbsp;
         <a
             
           href="https://github.com/NITISHsng"
-          className="relative border-2 border-green-600 p-2 rounded-full  hover:text-slate-600 transition hover:-translate-y-2 hover:shadow-lg "
+          className="relative border-2 border-green-600 p-2 rounded-full  hover:text-slate-600 transition hover:scale-135 hover:-translate-y-2 hover:shadow-lg "
         >
           <BsGithub className="text-green-700" size={22} />
         </a>
         <a
           href="https://www.linkedin.com/in/nitish-singha?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-          className="relative border-2 border-green-600 p-2 rounded-full  hover:text-slate-600 transition hover:-translate-y-2 hover:shadow-lg "
+          className="relative border-2 border-green-600 p-2 rounded-full  hover:text-slate-600 transition hover:scale-135 hover:-translate-y-2 hover:shadow-lg "
         >
           <BsLinkedin className="text-green-700" size={22} />
         </a>
         <a
           href="https://x.com/NitishSing63297"
-          className="relative border-2 border-green-600 p-2 rounded-full  hover:text-slate-600 transition hover:-translate-y-2 hover:shadow-lg "
+          className="relative border-2 border-green-600 p-2 rounded-full  hover:text-slate-600 transition hover:scale-135 hover:-translate-y-2 hover:shadow-lg "
         >
           <BsTwitter className="text-green-700" size={22} />
         </a>
         <a
           href="https://youtube.com/@quickhelp260?si=orGWpPqKQyQt-IEm"
-          className="relative border-2 border-green-600 p-2 rounded-full  hover:text-slate-600 transition hover:-translate-y-2 hover:shadow-lg "
+          className="relative border-2 border-green-600 p-2 rounded-full  hover:text-slate-600 transition hover:scale-135 hover:-translate-y-2 hover:shadow-lg "
         >
           <BsYoutube className="text-green-700" size={22} />
         </a>

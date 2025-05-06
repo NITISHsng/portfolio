@@ -21,12 +21,13 @@ const Navber = () => {
       }`}
     >
 
+      <div className="size-11 overflow-hidden rounded-full border-2 border-white">
       <img
-        src="logo.jpg"
+        src="logo2.png"
         alt=""
 
-        className="size-11 rounded-full border-2 border-white"
       />
+      </div>
 
       {/* Desktop Menu */}
       <ul className="hidden md:flex gap-8">

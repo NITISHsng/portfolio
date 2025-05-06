@@ -22,13 +22,15 @@ function App() {
     disableRotation={false}
   />
 </div>
-     <Navber/>
+   <div className='z-11'>
+   <Navber/>
      <Hero/>
      
      <About/>
      <Skills/>  
      <Project/>
      <Connect/>
+   </div>
   </>
   )
 }

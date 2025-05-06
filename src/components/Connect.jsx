@@ -11,8 +11,8 @@ import { section } from "framer-motion/client";
 
 const Connect = () => {
   return (
-    <section id="connect" className="w-screen flex items-center justify-center bg-transparent p-4">
-      <div className="w-11/12 rounded-2xl p-6">
+    <section id="connect" className="w-11/12 flex items-center justify-center bg-transparent ">
+      <div className="w-11/12 rounded-2xl ">
         <div className="flex items-center gap-3 mb-4">
           <img
             src="/connect.png"
@@ -22,7 +22,7 @@ const Connect = () => {
           <h2 className="text-4xl font-semibold text-white">Let's Connect</h2>
         </div>
 
-        <p className="text-white/70 text-lg sm:text-xl mb-6">
+        <p className="text-lg sm:text-xl leading-relaxed font-normal text-white p-5">
           I'm always open to discussing new projects, collaborations, or just
           connecting with fellow developers. Feel free to reach out through any
           of the platforms below.

@@ -40,8 +40,8 @@ const projects = [
 const Project = () => {
   return (
     
-    <section id="projects" className="w-screen flex items-center justify-center bg-transparent p-4">
-      <div className="w-11/12 rounded-2xl p-6">
+    <section id="projects" className=" flex items-center justify-center bg-transparent">
+      <div className="w-11/12 rounded-2xl py-6">
         <div className="flex items-center gap-3 mb-6">
           <img src="/project.png" alt="Logo" className="w-12 h-12 filter invert" />
           <h2 className="text-4xl font-semibold text-white">Projects</h2>

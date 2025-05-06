@@ -17,7 +17,7 @@ const Hero = () => {
 
 
 
-<div className="min-h-screen flex flex-col md:flex-row justify-center items-center text-white px-6 md:px-12 py-10 gap-10">
+<div className="min-h-screen flex flex-col md:flex-row justify-center items-center text-white gap-10">
   {/* Profile Image Section */}
   {/* <HangingPhoto/> */}
 
@@ -46,7 +46,7 @@ rotate-180"
   </div>
 
   {/* Text and Links Section */}
-  <div className="order-2 md:order-1 max-w-2xl text-center md:text-left">
+  <div className="order-2 md:order-1 max-w-2xl text-center md:text-left p-5">
     <Split
 text="Nitish Ch Singha"
 className="lg:text-5xl text-4xl sm:xl text-center font-bold relative bottom-4 "

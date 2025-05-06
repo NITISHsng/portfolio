@@ -27,8 +27,8 @@ const skills = [
 
 const Skils = () => {
   return (
-    <section id="skills" className="w-screen flex items-center justify-center bg-transparent p-4">
-      <div className="w-11/12 rounded-2xl p-6">
+    <section id="skills" className=" flex items-center justify-center bg-transparent ">
+      <div className="w-11/12 rounded-2xl">
         {/* Header */}
         <div className="flex items-center gap-3 mb-6">
           <img src="/skill.svg" alt="Logo" className="w-12 h-12 filter invert" />

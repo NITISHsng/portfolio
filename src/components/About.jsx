@@ -3,7 +3,7 @@ import { UserCircle2 } from "lucide-react";
 
 const About = () => {
   return (
-    <section id="about" className=" w-screen flex items-center justify-center bg-transparent p-4">
+    <section id="about" className=" w-screen flex items-center justify-center bg-transparent p-4 z-10">
       <div className="w-11/12 border-white/20 rounded-2xl p-6">
         <div className="flex items-center gap-3 mb-4">
           <img src="/about.svg" alt="Logo" className="w-12 h-12 filter invert" />

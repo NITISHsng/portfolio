@@ -27,7 +27,7 @@ const skills = [
 
 const Skils = () => {
   return (
-    <section id="skills" className="w-screen flex items-center justify-center bg-transparent p-6">
+    <section id="skills" className="w-screen flex items-center justify-center bg-transparent p-4">
       <div className="w-11/12 rounded-2xl p-6">
         {/* Header */}
         <div className="flex items-center gap-3 mb-6">

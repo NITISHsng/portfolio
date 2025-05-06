@@ -49,7 +49,7 @@ rotate-180"
   <div className="order-2 md:order-1 max-w-2xl text-center md:text-left">
     <Split
 text="Nitish Ch Singha"
-className="text-5xl sm:xl text-center font-bold relative bottom-4 "
+className="lg:text-5xl text-4xl sm:xl text-center font-bold relative bottom-4 "
 delay={150}
 animationFrom={{ opacity: 0, transform: 'translate3d(0,50px,0)' }}
 animationTo={{ opacity: 1, transform: 'translate3d(0,0,0)' }}
@@ -85,7 +85,7 @@ I'm a &nbsp;
 >
 
       <a
-      href="/NitishSingha_CV.pdf"
+      href="/Nitish_Chandra_Singha_CV.pdf"
       download
      className="inline-block bg-green-700 text-black py-2 px-6 rounded-2xl hover:bg-slate-700 transition relative border-2 border-green-600 p-2  hover:-translate-y-2 hover:shadow-lg "
     >

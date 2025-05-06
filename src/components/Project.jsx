@@ -40,7 +40,7 @@ const projects = [
 const Project = () => {
   return (
     
-    <section id="projects" className="w-screen flex items-center justify-center bg-transparent p-6">
+    <section id="projects" className="w-screen flex items-center justify-center bg-transparent p-4">
       <div className="w-11/12 rounded-2xl p-6">
         <div className="flex items-center gap-3 mb-6">
           <img src="/project.png" alt="Logo" className="w-12 h-12 filter invert" />
@@ -51,7 +51,7 @@ const Project = () => {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="border border-white/10 rounded-xl p-5 hover:border-white/20 transition"
+              className="border border-white/10 rounded-xl p-5 hover:border-white/20 transition z-10"
             >
               <h3 className="text-xl font-semibold text-white mb-2">{project.title}</h3>
               <p className="text-white/70 text-lg sm:text-xl mb-3">{project.description}</p>

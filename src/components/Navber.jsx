@@ -14,11 +14,13 @@ const Navber = () => {
   return (
   
     <div
-      className={`fixed left-0 top-0 w-full pt-4 px-[9%] flex justify-between items-center z-50 ${
-        isScrolled ? "bg-[#1f242d] text-white" : ""
+      className={`fixed left-0 top-0 w-full py-2 px-[9%] flex justify-between items-center z-50 ${
+        isScrolled
+        ? "bg-[#1f242d]/70 text-white backdrop-blur-md shadow-md"
+        : ""
       }`}
     >
-      {/* <a href="#" className="text-white text-2xl font-bold no-underline">Portfolio</a> */}
+
       <img
         src="logo.jpg"
         alt=""

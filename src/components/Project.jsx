@@ -47,7 +47,7 @@ const Project = () => {
           <h2 className="text-4xl font-semibold text-white">Projects</h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-5">
           {projects.map((project, index) => (
             <div
               key={index}

@@ -42,7 +42,7 @@ rotate-180"
     <img
       src="mypic2.png"
       alt="Logo"
-      className="w-full h-full scale-110 object-contain mix-blend-lighten absolute top-0 right-2 brightness-120"
+      className="w-full h-full scale-140 object-contain mix-blend-lighten absolute top-0 right-5 brightness-120"
     />
     
     {/* Overlay layer */}

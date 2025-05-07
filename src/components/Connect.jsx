@@ -22,7 +22,10 @@ const Connect = () => {
             alt="Logo"
             className="w-12 h-12 filter invert"
           />
-          <h2 className="text-4xl font-semibold text-white">Let's Connect</h2>
+
+          <h2 className="relative text-4xl font-semibold text-white after:block after:h-[5px] after:w-full after:bg-white after:transition-all after:duration-500 after:origin-left hover:after:bg-gradient-to-r hover:after:from-purple-500 hover:after:to-pink-500">
+            Let's Connect
+          </h2>
         </div>
 
         <p className="text-lg sm:text-xl leading-relaxed font-normal text-white p-5">

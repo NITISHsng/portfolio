@@ -13,11 +13,17 @@ import {
 import { SiTailwindcss, SiC } from "react-icons/si";
 
 const skills = [
-  { name: "JavaScript", icon: <DiJavascript className="text-white" size={36} /> },
+  {
+    name: "JavaScript",
+    icon: <DiJavascript className="text-white" size={36} />,
+  },
   { name: "React.js", icon: <DiReact className="text-white" size={36} /> },
   { name: "HTML", icon: <DiHtml5 className="text-white" size={36} /> },
   { name: "CSS", icon: <DiCss3 className="text-white" size={36} /> },
-  { name: "Tailwind CSS", icon: <SiTailwindcss className="text-white" size={36} /> },
+  {
+    name: "Tailwind CSS",
+    icon: <SiTailwindcss className="text-white" size={36} />,
+  },
   { name: "GitHub", icon: <DiGithub className="text-white" size={36} /> },
   { name: "Java", icon: <DiJava className="text-white" size={36} /> },
   { name: "C", icon: <SiC className="text-white" size={36} /> },
@@ -27,12 +33,22 @@ const skills = [
 
 const Skils = () => {
   return (
-    <section id="skills" className=" flex items-center justify-center bg-transparent ">
+    <section
+      id="skills"
+      className=" flex items-center justify-center bg-transparent "
+    >
       <div className="w-11/12 rounded-2xl">
         {/* Header */}
         <div className="flex items-center gap-3 mb-6">
-          <img src="/skill.svg" alt="Logo" className="w-12 h-12 filter invert" />
-          <h2 className="text-4xl font-semibold text-white">Skills</h2>
+          <img
+            src="/skill.svg"
+            alt="Logo"
+            className="w-12 h-12 filter invert"
+          />
+
+          <h2 className="relative text-4xl font-semibold text-white after:block after:h-[5px] after:w-full after:bg-white after:transition-all after:duration-500 after:origin-left hover:after:bg-gradient-to-r hover:after:from-purple-500 hover:after:to-pink-500">
+            Skills
+          </h2>
         </div>
 
         {/* Skills Grid */}

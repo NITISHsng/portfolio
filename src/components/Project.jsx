@@ -4,9 +4,9 @@ import { section } from "framer-motion/client";
 
 const projects = [
   {
-    title: "ToDo App",
+    title: "ToDo App ",
     description:
-      "A simple and responsive task manager to add, delete, and mark tasks as completed. Designed with a clean UI using vanilla JavaScript.",
+      "A simple and responsive task manager to add, delete, and mark tasks as  completed. Designed with a clean UI using html , css , js",
     technologies: ["HTML", "CSS", "JavaScript"],
     projectLink: "https://toxyz.netlify.app/",
     codeLink: "https://github.com/NITISHsng/Todo",
@@ -39,12 +39,21 @@ const projects = [
 
 const Project = () => {
   return (
-    
-    <section id="projects" className=" flex items-center justify-center bg-transparent">
+    <section
+      id="projects"
+      className=" flex items-center justify-center bg-transparent"
+    >
       <div className="w-11/12 rounded-2xl py-6">
         <div className="flex items-center gap-3 mb-6">
-          <img src="/project.png" alt="Logo" className="w-12 h-12 filter invert" />
-          <h2 className="text-4xl font-semibold text-white">Projects</h2>
+          <img
+            src="/project.png"
+            alt="Logo"
+            className="w-12 h-12 filter invert"
+          />
+
+          <h2 className="relative text-4xl font-semibold text-white after:block after:h-[5px] after:w-full after:bg-white after:transition-all after:duration-500 after:origin-left hover:after:bg-gradient-to-r hover:after:from-purple-500 hover:after:to-pink-500">
+            Projects
+          </h2>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-5">
@@ -53,8 +62,12 @@ const Project = () => {
               key={index}
               className="border border-white/10 rounded-xl p-5 hover:border-white/20 transition z-10"
             >
-              <h3 className="text-xl font-semibold text-white mb-2">{project.title}</h3>
-              <p className="text-white/70 text-lg sm:text-xl mb-3">{project.description}</p>
+              <h3 className="text-xl font-semibold text-white mb-2">
+                {project.title}
+              </h3>
+              <p className="text-white/70 text-lg sm:text-xl mb-3">
+                {project.description}
+              </p>
               <div className="mb-4 flex flex-wrap gap-2">
                 {project.technologies.map((tech, idx) => (
                   <span

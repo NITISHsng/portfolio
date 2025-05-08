@@ -1,13 +1,9 @@
 import React from "react";
-
-import { Computer, Cat, ExternalLink, Dog } from "lucide-react";
 import { BsGithub, BsLinkedin, BsTwitter, BsYoutube } from "react-icons/bs";
-import { GrGithub } from "react-icons/gr";
 import { motion } from "framer-motion";
-// import MyComponents from "./MyComponents"
-import { FaLinkedin } from "react-icons/fa";
 import Split from "./Split"
 import HangingPhoto from "./HangingPhoto";
+
 const Hero = () => {
   const handleAnimationComplete = () => {
     console.log('All letters have animated!');
@@ -79,7 +75,7 @@ I'm a &nbsp;
 </span>
 </h2>
 </div>
-
+{/* <DecryptedText/> */}
     {/* <MyComponents/> */}
     <p className="mb-8 text-lg sm:text-xl leading-relaxed font-normal">
       I create beautiful and functional websites using React, Tailwind

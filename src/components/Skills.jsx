@@ -35,7 +35,7 @@ const Skils = () => {
   return (
     <section
       id="skills"
-      className=" flex items-center justify-center bg-transparent "
+      className=" flex items-center justify-center bg-transparent z-4"
     >
       <div className="w-11/12 rounded-2xl">
         {/* Header */}

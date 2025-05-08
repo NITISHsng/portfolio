@@ -226,7 +226,7 @@ const Particles = ({
   return (
     <div
       ref={containerRef}
-      className={`particles-container ${className}`}
+      className={`z-1 particles-container ${className}`}
     />
   );
 };

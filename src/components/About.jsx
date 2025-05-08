@@ -1,5 +1,6 @@
 import React from "react";
 import { UserCircle2 } from "lucide-react";
+import StretchableLine from "./ui/StretchableLine";
 
 const About = () => {
   return (
@@ -62,6 +63,7 @@ const About = () => {
           goal is to become a well-rounded developer who can contribute
           meaningfully to both frontend engineering and user experience design.
         </p>
+        {/* <StretchableLine/> */}
       </div>
     </section>
   );

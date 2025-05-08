@@ -1,38 +1,38 @@
-import React,{ useState } from 'react'
-import Particles from './components/Particles';
-import './App.css'
-import Navber from './components/Navber'
-import Hero from './components/Hero'
-import About from './components/About'
-import Skills from './components/Skills'
-import Project from './components/Project'
-import  Connect  from './components/Connect';
+import React from 'react';
+import Particles from './components/ui/Particles';
+import './App.css';
+import Navber from './components/Navber';
+import Hero from './components/Hero';
+import About from './components/About';
+import Skills from './components/Skills';
+import Project from './components/Project';
+import Connect from './components/Connect';
+import StretchableLine from './components/ui/StretchableLine';
+import BackDrop from './components/ui/BackDrop';
+
 function App() {
   return (
-    <>
-    <div style={{ width: '100%', height: '100vh', position: 'fixed' }}>
-   <Particles
-    particleColors={['#ffffff', '#ffffff']}
-    particleCount={600}
-    particleSpread={10}
-    speed={0.1}
-    particleBaseSize={100}
-    moveParticlesOnHover={true}
-    alphaParticles={false}
-    disableRotation={false}
-  />
-</div>
-   <div className='z-11'>
-   <Navber/>
-     <Hero/>
-     
-     <About/>
-     <Skills/>  
-     <Project/>
-     <Connect/>
-   </div>
-  </>
-  )
+    <div className="relative">
+      <div className="fixed top-0 left-0 w-full h-full z-0">
+        <BackDrop />
+      </div>
+
+      <div className="relative z-10">
+        <Navber />
+        <Hero />
+        <About />
+        <StretchableLine />
+
+        <Skills />
+        <StretchableLine />
+
+        <Project />
+        <StretchableLine />
+
+        <Connect />
+      </div>
+    </div>
+  );
 }
 
-export default App
+export default App;

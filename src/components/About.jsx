@@ -21,7 +21,7 @@ const About = () => {
           </h2>
         </div>
         <p className="text-lg sm:text-xl leading-relaxed font-normal text-white p-5">
-          <span className="font-semibold text-gray-400 text-3xl"> Hello!</span>{" "}
+          <span className="font-semibold text-gray-400 text-3xl hover:text-gray-100 hover:scale-1.2"> Hello!</span>{" "}
           I'm Nitish Chandra Singha, a Computer Science student at{" "}
           <span className="font-semibold text-gray-400 text-xl"> GCELT</span>(
           Government college of Engineering and Leather Technology ) with a
@@ -40,13 +40,13 @@ const About = () => {
         </p>
         <br />
         <p className="text-lg sm:text-xl leading-relaxed font-normal text-white p-5">
-          <span className="font-semibold text-gray-400 text-3xl">
+          <span className="font-semibold text-gray-400 text-3xl hover:text-gray-100 hover:scale-1.2">
             {" "}
             Over time,{" "}
           </span>{" "}
           I’ve worked on various personal and collaborative projects, including
           task management apps, games, and real-world websites like{" "}
-          <span className="font-semibold text-white text-3xl">
+          <span className="font-semibold text-white text-3xl ">
             {" "}
             Singha
             <span className="font-semibold text-blue-800 text-3xl">

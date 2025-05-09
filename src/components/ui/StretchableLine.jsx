@@ -5,7 +5,7 @@ export default function StretchableLine() {
   const svgRef = useRef(null);
   const containerRef = useRef(null);
   const touchRef = useRef(false);
-  const [dimensions, setDimensions] = useState({ width: 800 });
+  const [dimensions, setDimensions] = useState({ width: 1400 });
 
   useEffect(() => {
     const updateDimensions = () => {
@@ -36,7 +36,7 @@ export default function StretchableLine() {
       }
 
       if (touchRef.current) {
-        const path = `M 10 50 Q ${x} ${y} ${dimensions.width - 10} 50`;
+        const path = `M 50 50 Q ${x} ${y} ${dimensions.width - 50} 50`;
         gsap.to(svgRef.current, {
           attr: { d: path },
           duration: 0.3,
@@ -48,7 +48,7 @@ export default function StretchableLine() {
     const handleMouseLeave = () => {
       touchRef.current = false;
       const midX = dimensions.width / 2;
-      const finalPath = `M 10 50 Q ${midX} 50 ${dimensions.width - 10} 50`;
+      const finalPath = `M 50 50 Q ${midX} 50 ${dimensions.width - 50} 50`;
       gsap.to(svgRef.current, {
         attr: { d: finalPath },
         duration: 1.5,
@@ -69,7 +69,7 @@ export default function StretchableLine() {
     <div className="w-full flex justify-center items-center z-0 ">
       <div
         ref={containerRef}
-        className="w-full max-w-[800px] h-[100px] "
+        className="w-full max-w-[1400px] h-[100px] "
       >
         <svg
           width="100%"
@@ -80,7 +80,7 @@ export default function StretchableLine() {
         >
           <path
             ref={svgRef}
-            d={`M 10 50 Q ${dimensions.width / 2} 50 ${dimensions.width - 10} 50`}
+            d={`M 50 50 Q ${dimensions.width / 2} 50 ${dimensions.width - 50} 50`}
             stroke="white"
             fill="transparent"
           />

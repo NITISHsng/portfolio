@@ -96,10 +96,10 @@ const Hero = () => {
 
   return (
     <section id="hero">
-      <div className="min-h-screen flex flex-col md:flex-row justify-center items-center text-white gap-10">
+      <div className="min-h-screen flex flex-col md:flex-row justify-center items-center text-white gap-3 md:p-[5%] lg:p-0">
 
 
-        <div ref={imageRef} className="order-1 md:order-2 flex justify-center items-center text-center">
+        <div ref={imageRef} className="order-1 md:order-2 mt-[16%] flex justify-center items-center text-center">
           <div className="relative size-[30vw] max-h-[380px] max-w-[380px] min-h-[230px] min-w-[230px]  md:size-[30vw] rounded-full p-1 overflow-hidden">
             <div
               className="absolute inset-0 animate-spin-slow rounded-full 
@@ -114,9 +114,7 @@ rotate-180"
             ></div>
 
             <div className="relative bg-[#1f242d] z-[10] size-full rounded-full flex justify-center items-center overflow-hidden">
-              {/* Image container */}
               <div className="relative w-full h-full">
-                {/* Image */}
                 <img
                   src="mypic2.png"
                   alt="Logo"
@@ -124,7 +122,6 @@ rotate-180"
 
                 />
 
-                {/* Overlay layer */}
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/100 pointer-events-none" />
               </div>
             </div>
@@ -132,12 +129,12 @@ rotate-180"
         </div>
 
         {/* Text and Links Section */}
-        <div className="relative order-2 md:order-1 max-w-2xl text-center md:text-left p-5">
+        <div className="relative order-2 md:order-1 max-w-2xl text-center md:text-left md-[60px]">
          <div ref={nameRef}>
     
            <Split
             text="Nitish Ch Singha"
-            className="lg:text-5xl text-4xl sm:xl text-center font-bold relative bottom-4 "
+            className="lg:text-5xl text-3xl text-center font-bold relative bottom-0 "
             delay={100}
             animationFrom={{ opacity: 0, transform: "translate3d(0,50px,0)" }}
             animationTo={{ opacity: 1, transform: "translate3d(0,0,0)" }}
@@ -184,11 +181,11 @@ rotate-180"
 
           </div>
 
-          <div ref={textRef} className="mb-8 lg:text-lg text-xl leading-relaxed font-normal px-3 md:px-0">
-            {/* I create beautiful and functional websites using React, Tailwind CSS, and modern frontend technologies. */}
+          <div ref={textRef} className="mb-8 lg:text-lg text-sm leading-relaxed font-xl">
+        
               <Split
             text="I create beautiful and functional websites using React, Tailwind CSS, and modern frontend technologies."
-            className=" text-center font-bold relative bottom-4 "
+            className=" text-center relative  "
             delay={40}
             animationFrom={{ opacity: 0, transform: "translate3d(-10,50px,0)" }}
             animationTo={{ opacity: 1, transform: "translate3d(0,0,0)" }}
@@ -234,7 +231,6 @@ rotate-180"
     ))}
   </motion.div>
 </div>
-
         </div>
       </div>
     </section>

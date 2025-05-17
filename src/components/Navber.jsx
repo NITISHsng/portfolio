@@ -1,6 +1,8 @@
 import { div } from "framer-motion/client";
 import React, { useState, useEffect,useRef } from "react";
 import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { Timeline } from "gsap/gsap-core";
 const Navber = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -12,34 +14,33 @@ const Navber = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const navRef = useRef(null);
-    const ulRef = useRef(null);
-
-
-  useEffect(() => {
- const tl=gsap.timeline()
-    tl.to(navRef.current, {
-      y:60,
-      opacity: 1,
-      duration: 0.6,
-      delay:.3,
+  
+    const navRef = useRef(null);
+      const ulRef = useRef(null);
+ useGSAP(()=>{
+  const tl=gsap.timeline()
+    tl.from(navRef.current, {
+      y:-60,
+      opacity: 0,
+      duration: 0.3,
+      delay:.1,
       ease: "power3.out",
     });
 
-    tl.to(ulRef.current.querySelectorAll("li"), {
-      y: 50,
-      opacity: 1,
-      stagger: 0.2,
+     tl.from(ulRef.current.querySelectorAll("li"), {
+      y: -50,
+      opacity: 0,
+      stagger: 0.1,
       duration: 0.4,
     });
+ })
 
-  }, []);
 
   return (
   
     <div
     ref={navRef}
-      className={`fixed left-0 top-[-60px]  w-full py-2 px-[9%] flex justify-between items-center z-50  ${
+      className={`fixed left-0 top-0  w-full py-2 px-[9%] flex justify-between items-center z-50  ${
         isScrolled
         ? "bg-[#1f242d]/70 text-white backdrop-blur-md shadow-md"
         : ""
@@ -61,7 +62,7 @@ const Navber = () => {
         <li >
           <a
             href="#hero"
-            className="text-white relative top-[-50px] no-underline hover:text-[#7cf03d]"
+            className="text-white relative top-0 no-underline hover:text-[#7cf03d]"
           >
             Home
           </a>
@@ -69,7 +70,7 @@ const Navber = () => {
         <li>
           <a
             href="#projects"
-            className="text-white relative top-[-50px]  no-underline hover:text-[#7cf03d]"
+            className="text-white relative top-0  no-underline hover:text-[#7cf03d]"
           >
             Projects
           </a>
@@ -77,7 +78,7 @@ const Navber = () => {
         <li>
           <a
             href="#skills"
-            className="text-white relative top-[-50px]  no-underline hover:text-[#7cf03d]"
+            className="text-white relative top-0  no-underline hover:text-[#7cf03d]"
           >
             Skills
           </a>
@@ -85,7 +86,7 @@ const Navber = () => {
         <li>
           <a
             href="#connect"
-            className="text-white relative top-[-50px]  no-underline hover:text-[#7cf03d]"
+            className="text-white relative top-0  no-underline hover:text-[#7cf03d]"
           >
             Contact
           </a>
@@ -93,7 +94,7 @@ const Navber = () => {
         <li>
           <a
             href="#about"
-            className="text-white relative top-[-50px]  no-underline hover:text-[#7cf03d]"
+            className="text-white relative top-0  no-underline hover:text-[#7cf03d]"
           >
             About
           </a>

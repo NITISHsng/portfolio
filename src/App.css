@@ -16,36 +16,36 @@ body{
   }
   
   .animate-spin-slow {
-    animation: spin-slow 8s linear infinite;
+    animation: spin-slow s6 linear infinite;
   }
   .role {
     opacity: 0;
     pointer-events: none;
     position: absolute;
     left: 0;
-    color: #7cf03d;
-    -webkit-text-stroke: 0.7px #7cf03d;
-    animation: display-text 16s linear infinite;
-    animation-delay: calc(4s * var(--i));
+    color: #59ff00;
+    -webkit-text-stroke: 0.7px #59ff00;
+    animation: display-text 12s linear infinite;
+    animation-delay: calc(3s * var(--i));
   }
   
   .role::before {
     content: attr(data-text);
     position: absolute;
     width: 100%;
-    border-right: 2px solid #7cf03d;
-    color: #7cf03d;
+    border-right: 2px solid #59ff00;
+    color: #59ff00;
     white-space: nowrap;
     overflow: hidden;
-    animation: fill-text 4s linear infinite;
+    animation: fill-text 3s linear infinite;
   }
   
   @keyframes display-text {
-    0%, 25% {
+    0%, 35% {
       opacity: 1;
       pointer-events: auto;
     }
-    25%, 100% {
+    35%, 100% {
       opacity: 0;
       pointer-events: none;
     }

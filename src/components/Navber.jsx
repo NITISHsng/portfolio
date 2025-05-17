@@ -58,7 +58,7 @@ const Navber = () => {
       {/* Desktop Menu */}
       <ul 
       ref={ulRef}
-      className="hidden md:flex gap-8">
+      className="hidden lg:flex gap-8">
         <li >
           <a
             href="#hero"

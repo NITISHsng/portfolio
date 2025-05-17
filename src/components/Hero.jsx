@@ -42,11 +42,48 @@ const Hero = () => {
         duration: 0.2,
         opacity: 0, 
       });
-      tl.from(buttonRef.current, {
+      tl.from(buttonRef.current.querySelectorAll('a'), {
+        y:50,
+        duration: 0.6,
+        opacity: 0, 
+        delay:1.6,
+        stagger:.3
+      });
+
+    });
+
+    
+    screenWidth.add("(min-width: 448px)", () => {
+      const tl = gsap.timeline();
+      
+      tl.from(imageRef.current, {
+        y:-50,
+        duration: 0.4,
+        opacity: 0,
+        delay: .3,
+      })
+      tl.from(nameRef.current, {
+        x: 50,
+        duration: 0.4,
+        opacity: 0,
+        delay: 0.1, 
+      });
+      tl.from(iamRef.current, {
+        y: 50,
+        duration: 0.4,
+        opacity: 0, 
+      });
+      tl.from(textRef.current, {
+        y: 50,
+        duration: 0.2,
+        opacity: 0, 
+      });
+      tl.from(buttonRef.current.querySelectorAll('a'), {
         y: 50,
         duration: 0.6,
         opacity: 0, 
-        delay:1.6
+        delay:1.6,
+       stagger:.2
       });
 
     });
@@ -95,7 +132,7 @@ rotate-180"
         </div>
 
         {/* Text and Links Section */}
-        <div className=" order-2 md:order-1 max-w-2xl text-center md:text-left p-5">
+        <div className="relative order-2 md:order-1 max-w-2xl text-center md:text-left p-5">
          <div ref={nameRef}>
     
            <Split
@@ -109,10 +146,11 @@ rotate-180"
             rootMargin="-50px"
           />
          </div>
-          <div ref={iamRef} className="flex text-center ">
-            <h2 className="text-3xl mb-6 relative inline-block">
+          <div ref={iamRef} className="flex justify-center left-[-100px]  relative md:justify-start md:left-0 ">
+
+            <h2 className="text-3xl mb-6 relative inline-block ">
               I'm a &nbsp;
-              <span className="relative">
+              <span className="relative w-[50px]">
                 <span
                   data-text="B.Tech&nbsp;Student"
                   className="role"
@@ -143,13 +181,13 @@ rotate-180"
                 </span>
               </span>
             </h2>
+
           </div>
 
-          <p ref={textRef} className="mb-8 text-lg sm:text-xl leading-relaxed font-normal">
-            
+          <div ref={textRef} className="mb-8 lg:text-lg text-xl leading-relaxed font-normal px-3 md:px-0">
+            {/* I create beautiful and functional websites using React, Tailwind CSS, and modern frontend technologies. */}
               <Split
-            text="I create beautiful and functional websites using React, Tailwind
-            CSS, and modern frontend technologies."
+            text="I create beautiful and functional websites using React, Tailwind CSS, and modern frontend technologies."
             className=" text-center font-bold relative bottom-4 "
             delay={40}
             animationFrom={{ opacity: 0, transform: "translate3d(-10,50px,0)" }}
@@ -158,53 +196,45 @@ rotate-180"
             threshold={0.2}
             rootMargin="-50px"
           />
-          </p>
-          <div ref={buttonRef} className="flex flex-col sm:flex-row justify-baseline items-center gap-6">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1 }}
-            >
-              <a
-                href="/Nitish_Chandra_Singha_CV.pdf"
-                download
-                className="inline-block bg-green-700 text-black py-2 px-6 rounded-2xl hover:bg-slate-700 transition relative border-2 border-green-600 p-2  hover:-translate-y-2 hover:shadow-lg "
-              >
-                Download CV
-              </a>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, y: -20, scale: 1.5 }}
-              animate={{ opacity: 1, y: 0, scale: 1 }}
-              transition={{ duration: 1.5 }}
-              className="flex gap-6"
-            >
-              <a
-                href="https://github.com/NITISHsng"
-                className="relative border-2 border-green-600 p-2 rounded-full  hover:text-slate-600 transition hover:scale-135 hover:-translate-y-2 hover:shadow-lg "
-              >
-                <BsGithub className="text-green-700" size={22} />
-              </a>
-              <a
-                href="https://www.linkedin.com/in/nitish-singha?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-                className="relative border-2 border-green-600 p-2 rounded-full  hover:text-slate-600 transition hover:scale-135 hover:-translate-y-2 hover:shadow-lg "
-              >
-                <BsLinkedin className="text-green-700" size={22} />
-              </a>
-              <a
-                href="https://x.com/NitishSing63297"
-                className="relative border-2 border-green-600 p-2 rounded-full  hover:text-slate-600 transition hover:scale-135 hover:-translate-y-2 hover:shadow-lg "
-              >
-                <BsTwitter className="text-green-700" size={22} />
-              </a>
-              <a
-                href="https://youtube.com/@quickhelp260?si=orGWpPqKQyQt-IEm"
-                className="relative border-2 border-green-600 p-2 rounded-full  hover:text-slate-600 transition hover:scale-135 hover:-translate-y-2 hover:shadow-lg "
-              >
-                <BsYoutube className="text-green-700" size={22} />
-              </a>
-            </motion.div>
           </div>
+       <div ref={buttonRef} className="flex flex-col sm:flex-row justify-center items-center gap-6">
+  <motion.div
+    initial={{ opacity: 0, y: 30 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 1 }}
+  >
+    <a
+      href="/Nitish_Chandra_Singha_CV.pdf"
+      download
+      className="inline-block bg-green-700 text-black py-2 px-6 rounded-2xl hover:bg-slate-700 transition-transform duration-300 ease-in-out relative border-2 border-green-600 p-2 hover:-translate-y-2 hover:shadow-lg"
+    >
+      Download CV
+    </a>
+  </motion.div>
+
+  <motion.div
+    initial={{ opacity: 0, y: -20, scale: 1.5 }}
+    animate={{ opacity: 1, y: 0, scale: 1 }}
+    transition={{ duration: 1.5 }}
+    className="flex gap-6"
+  >
+    {[
+      { href: "https://github.com/NITISHsng", icon: <BsGithub size={22} /> },
+      { href: "https://www.linkedin.com/in/nitish-singha", icon: <BsLinkedin size={22} /> },
+      { href: "https://x.com/NitishSing63297", icon: <BsTwitter size={22} /> },
+      { href: "https://youtube.com/@quickhelp260?si=orGWpPqKQyQt-IEm", icon: <BsYoutube size={22} /> },
+    ].map(({ href, icon }, index) => (
+      <a
+        key={index}
+        href={href}
+        className="relative border-2 border-green-600 p-2 rounded-full hover:text-slate-600 transition-transform duration-300 ease-in-out hover:scale-110 hover:-translate-y-2 hover:shadow-lg"
+      >
+        <span className="text-green-700">{icon}</span>
+      </a>
+    ))}
+  </motion.div>
+</div>
+
         </div>
       </div>
     </section>

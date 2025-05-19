@@ -22,8 +22,8 @@ const Navber = () => {
     tl.from(navRef.current, {
       y:-60,
       opacity: 0,
-      duration: 0.3,
-      delay:.1,
+      duration: 0.4,
+      delay:.2,
       ease: "power3.out",
     });
 

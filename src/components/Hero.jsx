@@ -134,7 +134,7 @@ rotate-180"
          <div ref={nameRef}>
     
            <Split
-            text="Nitish Ch Singha"
+            text="Nitish Chandra Singha"
             className="lg:text-5xl text-3xl text-center font-bold relative "
             delay={100}
             animationFrom={{ opacity: 0, transform: "translate3d(0,50px,0)" }}

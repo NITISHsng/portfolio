@@ -11,7 +11,9 @@ import {
   DiDatabase,
 } from "react-icons/di";
 import { SiTailwindcss, SiC } from "react-icons/si";
-
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 const skills = [
   {
     name: "JavaScript",
@@ -30,33 +32,85 @@ const skills = [
   { name: "Python", icon: <DiPython className="text-white" size={36} /> },
   { name: "SQL", icon: <DiDatabase className="text-white" size={36} /> },
 ];
-
+gsap.registerPlugin(ScrollTrigger);
 const Skils = () => {
+  useGSAP(()=>{
+
+    gsap.to("#items .abc", {
+  opacity: 1,
+  y:30,
+  stagger:.2,
+  duration: 0.5,
+  scrollTrigger: {
+    trigger: "#items", 
+    start: "top 90%",
+    end: "top 50%",
+    scrub: 2,
+  },
+});
+
+
+
+gsap.to("#MySkills", {
+  opacity: 1,
+  duration: 0.5,
+  scrollTrigger: {
+    trigger: "#skills", // <-- fixed here
+    start: "top 90%",
+    end: "top 50%",
+    // scrub: 2,
+  },
+});
+
+gsap.fromTo(
+  "#skillsUnderline",
+  { scaleX: 0, transformOrigin: "left" },
+  {
+    scaleX: 1,
+    duration: 2,
+    delay: 1,
+    scrollTrigger: {
+      trigger: "#skills", // <-- fixed here too
+      start: "top 90%",
+      end: "top 50%",
+      scrub: true,
+      // markers: true,
+    },
+  }
+);
+
+
+     
+  })
   return (
     <section
       id="skills"
-      className=" flex items-center justify-center bg-transparent z-4"
+      className=" flex items-center justify-center  z-4 w-full min-h-[40vh]"
     >
       <div className="w-11/12 rounded-2xl">
         {/* Header */}
-        <div className="flex items-center gap-3 mb-6">
+        <div id="MySkills" className="flex items-center gap-3 opacity-0">
           <img
             src="/skill.svg"
             alt="Logo"
             className="w-12 h-12 filter invert"
           />
 
-          <h2 className="relative text-4xl font-semibold text-white after:block after:h-[5px] after:w-full after:bg-white after:transition-all after:duration-500 after:origin-left hover:after:bg-gradient-to-r hover:after:from-purple-500 hover:after:to-pink-500">
-            Skills
-          </h2>
+           <h2 className="text-4xl font-semibold text-white relative group">
+  Skills
+  <span
+    id="skillsUnderline"
+    className="block h-[5px] w-full bg-white transition-all duration-300 group-hover:bg-gradient-to-r group-hover:from-purple-500 group-hover:to-pink-500"
+  ></span>
+</h2>
         </div>
 
         {/* Skills Grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 p-5">
+        <div id="items" className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 p-5">
           {skills.map((skill, index) => (
             <div
               key={index}
-              className="bg-white/10 text-white rounded-xl p-4 flex items-center gap-3 shadow hover:bg-white/20 transition"
+              className="abc bg-white/10 text-white rounded-xl p-4 flex items-center gap-3 shadow hover:bg-white/20 transition opacity-0"
             >
               {skill.icon}
               <span className="text-base">{skill.name}</span>

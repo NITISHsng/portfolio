@@ -9,7 +9,9 @@ import {
   DiReact,
   DiPython,
   DiDatabase,
+
 } from "react-icons/di";
+import { GiSaphir } from "react-icons/gi";
 import { SiTailwindcss, SiC } from "react-icons/si";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
@@ -26,6 +28,8 @@ const skills = [
     name: "Tailwind CSS",
     icon: <SiTailwindcss className="text-white" size={36} />,
   },
+  { name: "Gsap", icon: <GiSaphir className="text-white" size={36} /> },
+  { name: "Git", icon: <DiGit className="text-white" size={36} /> },
   { name: "GitHub", icon: <DiGithub className="text-white" size={36} /> },
   { name: "Java", icon: <DiJava className="text-white" size={36} /> },
   { name: "C", icon: <SiC className="text-white" size={36} /> },

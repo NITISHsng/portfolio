@@ -97,7 +97,7 @@ const Hero = () => {
 
 
   return (
-    <section id="hero">
+    <section id="home">
       <div className="min-h-screen flex flex-col md:flex-row justify-center items-center text-white gap-3 md:p-10">
 
         <div ref={imageRef} className="order-1 md:order-2 flex justify-center items-center text-center mt-[-50px]">
@@ -117,9 +117,10 @@ rotate-180"
             <div className="relative bg-[#1f242d] z-[10] size-full rounded-full flex justify-center items-center overflow-hidden">
               <div className="relative w-full h-full">
                 <img
-                  src="mypic2.png"
+                  src="myimg.png"
                   alt="Logo"
-                  className=" w-full h-full scale-130 object-contain mix-blend-lighten absolute top-0 right-5 brightness-120 hover:scale-150 transform transition-transform duration-300 ease-in-out"
+
+                  className=" w-full h-full scale-x-[-1] scale-110 object-contain mix-blend-lighten absolute top-0 right-0 brightness-120 hover:scale-140 hover:scale-x-[-1] transform transition-transform duration-300 ease-in-out"
 
                 />
 
@@ -182,7 +183,7 @@ rotate-180"
 
           </div>
 
-          <div ref={textRef} className="mb-8 lg:text-lg text-[14px] leading-relaxed font-xl">
+          <div ref={textRef} className="mb-8 lg:text-lg text-[14px] leading-relaxed font-xl p-2">
         
               <Split
             text="I create beautiful and functional websites using React, Tailwind CSS, and modern frontend technologies."
@@ -200,7 +201,7 @@ rotate-180"
         <a
       href="/Nitish_Chandra_Singha_CV.pdf"
       download
-      className="inline-block bg-green-700 text-black py-2 px-6 rounded-2xl hover:bg-slate-700 "
+      className="inline-block bg-green-700 text-black py-2 px-6 rounded-2xl hover:bg-slate-700 font-semibold "
     >
       Download CV
     </a>

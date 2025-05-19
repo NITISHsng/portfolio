@@ -12,7 +12,7 @@ import { section } from "framer-motion/client";
 const Connect = () => {
   return (
     <section
-      id="connect"
+      id="contact"
       className="w-11/12 flex items-center justify-center bg-transparent "
     >
       <div className="w-11/12 rounded-2xl ">

@@ -114,19 +114,17 @@ after:content-[''] after:absolute after:top-0 after:left-0 after:w-full after:h-
 rotate-180"
             ></div>
 
-            <div className="relative bg-[#1f242d] z-[10] size-full rounded-full flex justify-center items-center overflow-hidden">
-              <div className="relative w-full h-full">
-                <img
-                  src="myimg.png"
-                  alt="Logo"
+           <div className="relative bg-[#1f242d] z-[10] aspect-square rounded-full flex justify-center items-center overflow-hidden">
+  <div className="relative w-full h-full scale-x-[-1]">
+    <img
+      src="myimg.png"
+      alt="Logo"
+      className="w-full h-full  scale-110 object-contain mix-blend-lighten absolute top-0 right-0 brightness-125 hover:scale-125  transform transition-transform duration-300 ease-in-out transform-origin-center"
+    />
+    <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/100 pointer-events-none" />
+  </div>
+</div>
 
-                  className=" w-full h-full scale-x-[-1] scale-110 object-contain mix-blend-lighten absolute top-0 right-0 brightness-120 hover:scale-140 hover:scale-x-[-1] transform transition-transform duration-300 ease-in-out"
-
-                />
-
-                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/100 pointer-events-none" />
-              </div>
-            </div>
           </div>
         </div>
 
@@ -201,7 +199,7 @@ rotate-180"
         <a
       href="/Nitish_Chandra_Singha_CV.pdf"
       download
-      className="inline-block bg-green-700 text-black py-2 px-6 rounded-2xl hover:bg-slate-700 font-semibold "
+      className="inline-block bg-wgite border-2 border-white text-white py-2 px-6 rounded-2xl hover:bg-black/70 font-semibold "
     >
       Download CV
     </a>
@@ -222,9 +220,9 @@ rotate-180"
       <a
         key={index}
         href={href}
-        className="relative border-2 border-green-600 p-2 rounded-full hover:text-slate-600 "
+        className="relative border-2 border-white p-2 rounded-full hover:bg-black/70 "
       >
-        <span className="text-green-700">{icon}</span>
+        <span className="text-white">{icon}</span>
       </a>
     ))}
   </motion.div>

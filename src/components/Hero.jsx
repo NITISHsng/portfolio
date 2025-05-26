@@ -42,11 +42,14 @@ const Hero = () => {
         opacity: 0,
       });
       tl.from(buttonRef.current.querySelectorAll("span,a"), {
-        y: 30,
-        duration: 0.7,
+        y: 40,
+        // duration: 0.7,
         opacity: 0,
-        delay: 1.4,
-        stagger: 0.2,
+        // delay: 1.4,
+        // stagger: 0.2,
+        stagger: 0.1,
+        duration: 2.5,
+        ease: "elastic.out(1,0.6)",
       });
     });
 
@@ -303,7 +306,7 @@ rotate-180"
 
             <div className="h-full w-fit flex justify-center items-center hover:items-start transform transition-all duration-300">
               <a
-                href="/Nitish_Chandra_Singha_resume.pdf"
+                href="/Nitish_ch_singha_resume.pdf"
                 download
                 className="gap-2 flex hover:bottom-20 bg-wgite border-2 border-white text-white py-1 px-5 rounded-[5px] hover:bg-black/70 font-semibold "
               >

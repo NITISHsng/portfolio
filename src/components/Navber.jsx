@@ -149,7 +149,7 @@ const Navbar = () => {
       </div>
       <div className=" hidden lg:flex h-[20px] w-fit justify-center items-center hover:items-start transform transition-all duration-300"> 
          <a
-      href="/Nitish_Chandra_Singha_resume.pdf"
+      href="/Nitish_ch_singha_resume.pdf"
       download
       className="gap-1 flex hover:bottom-20 bg-wgite border-2 border-white text-white py-1 px-4 rounded-[5px] bg-black hover:bg-black/70 font-semibold "
     >

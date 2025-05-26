@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { Cross } from "lucide-react";
+import { Download } from "lucide-react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -40,14 +41,15 @@ const Navbar = () => {
         duration: 0.4,
         delay: 0.2,
         duration:2.5,
-ease: "elastic.out(1,0.4)",
+        ease: "elastic.out(1,0.4)",
       });
-      tl.from(ulRef.current?.querySelectorAll("li") || [], {
-        y: -50,
-        opacity: 0,
-        stagger: 0.1,
-        duration: 0.4,
-      });
+   tl.from(ulRef.current?.querySelectorAll("li") || [], {
+  y: -50,
+  opacity: 0,
+  stagger: 0.1,
+  duration: 2.5,
+  ease: "elastic.out(1,0.4)"
+}, "-=2");
     }, { scope: navRef });
   } else {
     // Mobile menu animation (stored in timelineRef)
@@ -98,7 +100,7 @@ ease: "elastic.out(1,0.4)",
     >
       <div className="flex justify-between w-full md:w-auto">
         <div className="size-11 overflow-hidden rounded-full border-2 border-white">
-      <img src="logo2.png" alt="Logo" className="object-cover w-full h-full" />
+      <img src="mylogo2.png" alt="Logo" className="object-cover w-full h-full" />
          </div>
         <div
           className="md:hidden text-white text-3xl cursor-pointer"
@@ -145,6 +147,15 @@ ease: "elastic.out(1,0.4)",
           ))}
         </ul>
       </div>
+      <div className=" hidden lg:flex h-[20px] w-fit justify-center items-center hover:items-start transform transition-all duration-300"> 
+         <a
+      href="/Nitish_Chandra_Singha_resume.pdf"
+      download
+      className="gap-1 flex hover:bottom-20 bg-wgite border-2 border-white text-white py-1 px-4 rounded-[5px] bg-black hover:bg-black/70 font-semibold "
+    >
+      Resume <Download size={17} className="relative top-[4px]"/>
+    </a>
+  </div>
     </div>
   );
 };

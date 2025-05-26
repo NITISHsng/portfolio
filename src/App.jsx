@@ -10,7 +10,7 @@ import StretchableLine from './components/ui/StretchableLine';
 import BackDrop from './components/ui/BackDrop';
 function App() {
   return (
-    <div className="relative">
+    <div className="relative w-screen overflow-x-hidden">
       <div className="fixed top-0 left-0 w-full h-full z-0">
         <BackDrop />
       </div>

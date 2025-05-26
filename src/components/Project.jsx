@@ -53,7 +53,28 @@ const Project = () => {
   const projectHeading = useRef(null);
 
   useEffect(() => {
-    gsap.fromTo(".projects-grid", 
+    gsap.fromTo(".clientProjects .projects-grid", 
+      {
+        y:50,
+        opacity:0,
+      },
+      {
+      opacity: 1,
+      duration:1,
+      y:0,
+      delay:0.4,
+      duration: 0.5,
+      scrollTrigger: {
+        trigger: "#clientProjects",
+        start: "top 70%",
+        end: "top 50%",
+        // markers:true,
+          // scrub: true,
+      },
+    });
+
+
+       gsap.fromTo(".personalProjects .projects-grid", 
       {
         y:50,
         opacity:0,
@@ -72,7 +93,6 @@ const Project = () => {
           // scrub: true,
       },
     });
-
   }, []);
 
   const renderProjectCards = (list) => (
@@ -136,13 +156,18 @@ const Project = () => {
         <h3 id="personalProjects" className="text-2xl ml-6 font-semibold text-white mb-4 mt-6">
           Personal Projects
         </h3>
+        <div  className="personalProjects">
+
         {renderProjectCards(personalProjects)}
+        </div>
 
         {/* Client Projects */}
-        <h3 id="clintProjects" className="text-2xl font-semibold ml-6 text-white mb-4 mt-10">
+        <h3 id="clientProjects" className="text-2xl font-semibold ml-6 text-white mb-4 mt-10">
           Client Projects
         </h3>
-        {renderProjectCards(clientProjects)}
+        <div className="clientProjects">
+          {renderProjectCards(clientProjects)}
+        </div>
       </div>
     </section>
   );

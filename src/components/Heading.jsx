@@ -7,9 +7,26 @@ gsap.registerPlugin(ScrollTrigger);
 const Heading = ({icon,text}) => {
   const projectsRef = useRef(null);
   const underlineRef = useRef(null);
+  const contanarRef = useRef(null);
 
   useEffect(() => {
-    if (projectsRef.current && underlineRef.current) {
+
+    if (projectsRef.current) {
+       gsap.fromTo(
+        contanarRef.current,
+        { x:200,opacity:0 },
+        {
+          x:0,
+          opacity:1,
+          scrollTrigger: {
+            trigger: projectsRef.current,
+            start: 'top 90%',
+            end: 'top 50%',
+            scrub: true,
+          },
+        }
+      );
+
       gsap.fromTo(
         underlineRef.current,
         { scaleX: 0, transformOrigin: 'left' },
@@ -29,9 +46,9 @@ const Heading = ({icon,text}) => {
   }, []);
 
   return (
-    <div>
+    <div className='w-screen overflow-hidden'>
       <div ref={projectsRef}>
-        <div className="flex items-center gap-3 mb-6">
+        <div ref={contanarRef} className="flex items-center gap-3 mb-6">
           <img
             src={icon}
             alt="Logo"

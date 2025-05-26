@@ -4,39 +4,15 @@ import StretchableLine from "./ui/StretchableLine";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Heading from "./Heading";
 
 gsap.registerPlugin(ScrollTrigger);
 const About = () => {
   
   useGSAP(()=>{
-  // Fade in heading
-  gsap.to("#aboutMe", {
-    opacity: 1,
-    duration: 0.5,
-    scrollTrigger: {
-      trigger: "#about",
-      start: "top 80%",
-      end: "top 20%",
-      scrub: 2,
-    }
-  });
 
-  // Animate underline from scaleX 0 to 1 (grow from left)
-  gsap.fromTo(
-    "#aboutUnderline",
-    { scaleX: 0, transformOrigin: "left" },
-    {
-      scaleX: 1,
-      duration: 2,
-      delay:.5,
-      scrollTrigger: {
-        trigger: "#about",
-        start: "top 80%",
-        end: "top 20%",
-        scrub: true,
-      },
-    }
-  );
+
+
     gsap.to("#para1",{
      duration:.5,
      y:40,
@@ -109,23 +85,9 @@ const About = () => {
       className=" flex items-center justify-center z-10"
     >
       <div className="w-11/12 border-white/20 rounded-2xl py-6">
-        <div id="aboutMe" className="flex items-center mb-[-30px] gap-3 opacity-0">
-          <img
-            src="/about.svg"
-            alt="Logo"
-            className="w-12 h-12 filter invert"
-          />
 
- <h2 className="text-4xl font-semibold text-white relative group">
-  About Me
-  <span
-    id="aboutUnderline"
-    className="block h-[5px] w-full bg-white transition-all duration-300 group-hover:bg-gradient-to-r group-hover:from-purple-500 group-hover:to-pink-500"
-  ></span>
-</h2>
+              <Heading icon={"/about.svg"} text={" About Me"}/>
 
-
-        </div>
         <p id="para1" className="text-lg sm:text-xl leading-relaxed font-normal text-white p-5 opacity-0">
           <span className="font-semibold text-gray-400 text-3xl hover:text-gray-100 hover:scale-1.2"> Hello!</span>{" "}
           I'm Nitish Chandra Singha, a Computer Science student at{" "}

@@ -39,6 +39,8 @@ const Navbar = () => {
         opacity: 0,
         duration: 0.4,
         delay: 0.2,
+        duration:2.5,
+ease: "elastic.out(1,0.4)",
       });
       tl.from(ulRef.current?.querySelectorAll("li") || [], {
         y: -50,
@@ -96,8 +98,8 @@ const Navbar = () => {
     >
       <div className="flex justify-between w-full md:w-auto">
         <div className="size-11 overflow-hidden rounded-full border-2 border-white">
-          <img src="logo2.png" alt="Logo" />
-        </div>
+      <img src="logo2.png" alt="Logo" className="object-cover w-full h-full" />
+         </div>
         <div
           className="md:hidden text-white text-3xl cursor-pointer"
           onClick={() => {

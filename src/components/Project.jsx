@@ -1,15 +1,20 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { ExternalLink, Github } from "lucide-react";
-import { section } from "framer-motion/client";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+import Heading from "./Heading";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const projects = [
   {
-    title: "ToDo App ",
+    title: "ToDo App",
     description:
-      "A simple and responsive task manager to add, delete, and mark tasks as  completed. Designed with a clean UI using html , css , js",
+      "A simple and responsive task manager to add, delete, and mark tasks as completed. Designed with a clean UI using HTML, CSS, JS.",
     technologies: ["HTML", "CSS", "JavaScript"],
     projectLink: "https://toxyz.netlify.app/",
     codeLink: "https://github.com/NITISHsng/Todo",
+    type: "personal",
   },
   {
     title: "GuessKaro Game",
@@ -18,6 +23,7 @@ const projects = [
     technologies: ["HTML", "CSS", "JavaScript", "Firebase"],
     projectLink: "https://guesskoro.vercel.app/",
     codeLink: "https://github.com/NITISHsng/guessing-game",
+    type: "personal",
   },
   {
     title: "Hostel Mess Management",
@@ -26,6 +32,7 @@ const projects = [
     technologies: ["React", "Tailwind CSS", "Firebase"],
     projectLink: "https://hostelmess.netlify.app/",
     codeLink: "https://github.com/NITISHsng/Mess",
+    type: "personal",
   },
   {
     title: "SinghaInfra",
@@ -34,73 +41,108 @@ const projects = [
     technologies: ["React", "Tailwind CSS", "Firebase"],
     projectLink: "https://singhainfra.in",
     codeLink: "https://github.com/nitish-s/san-construction",
+    type: "client",
   },
 ];
 
 const Project = () => {
+  const personalProjects = projects.filter((p) => p.type === "personal");
+  const clientProjects = projects.filter((p) => p.type === "client");
+
+  const MyProjects = useRef(null);
+  const projectHeading = useRef(null);
+
+  useEffect(() => {
+    gsap.fromTo(".projects-grid", 
+      {
+        y:50,
+        opacity:0,
+      },
+      {
+      opacity: 1,
+      duration:1,
+      y:0,
+      delay:0.4,
+      duration: 0.5,
+      scrollTrigger: {
+        trigger: "#personalProjects",
+        start: "top 70%",
+        end: "top 50%",
+        // markers:true,
+          // scrub: true,
+      },
+    });
+
+  }, []);
+
+  const renderProjectCards = (list) => (
+    <div className="projects-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-5 opacity-0">
+      {list.map((project, index) => (
+        <div
+          key={index}
+          className="project border border-white/10 rounded-xl p-5 hover:border-white/20 transition z-10"
+        >
+          <h3 className="text-xl font-semibold text-white mb-2">
+            {project.title}
+          </h3>
+          <p className="text-white/70 text-lg sm:text-xl mb-3">
+            {project.description}
+          </p>
+          <div className="mb-4 flex flex-wrap gap-2">
+            {project.technologies.map((tech, idx) => (
+              <span
+                key={idx}
+                className="px-2 py-0.5 text-xs rounded bg-white/10 text-white border border-white/20"
+              >
+                {tech}
+              </span>
+            ))}
+          </div>
+          <div className="flex gap-3">
+            <a
+              href={project.projectLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1 px-3 py-1 text-sm bg-white text-black rounded hover:bg-gray-200 transition"
+            >
+              <ExternalLink size={16} />
+              Live Demo
+            </a>
+            <a
+              href={project.codeLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1 px-3 py-1 text-sm border border-white text-white rounded hover:bg-white hover:text-black transition"
+            >
+              <Github size={16} />
+              GitHub Code
+            </a>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+
   return (
     <section
       id="projects"
-      className=" flex items-center justify-center bg-transparent"
+      className="flex flex-col items-center justify-center bg-transparent"
     >
       <div className="w-11/12 rounded-2xl py-6">
-        <div className="flex items-center gap-3 mb-6">
-          <img
-            src="/project.png"
-            alt="Logo"
-            className="w-12 h-12 filter invert"
-          />
 
-          <h2 className="relative text-4xl font-semibold text-white after:block after:h-[5px] after:w-full after:bg-white after:transition-all after:duration-500 after:origin-left hover:after:bg-gradient-to-r hover:after:from-purple-500 hover:after:to-pink-500">
-            Projects
-          </h2>
-        </div>
+      <Heading icon={"/project.png"} text={"Projects"}/>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-5">
-          {projects.map((project, index) => (
-            <div
-              key={index}
-              className="border border-white/10 rounded-xl p-5 hover:border-white/20 transition z-10"
-            >
-              <h3 className="text-xl font-semibold text-white mb-2">
-                {project.title}
-              </h3>
-              <p className="text-white/70 text-lg sm:text-xl mb-3">
-                {project.description}
-              </p>
-              <div className="mb-4 flex flex-wrap gap-2">
-                {project.technologies.map((tech, idx) => (
-                  <span
-                    key={idx}
-                    className="px-2 py-0.5 text-xs rounded bg-white/10 text-white border border-white/20"
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
-              <div className="flex gap-3">
-                <a
-                  href={project.projectLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-1 px-3 py-1 text-sm bg-white text-black rounded hover:bg-gray-200 transition"
-                >
-                  <ExternalLink size={16} />
-                  Live Demo
-                </a>
-                <a
-                  href={project.codeLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-1 px-3 py-1 text-sm border border-white text-white rounded hover:bg-white hover:text-black transition"
-                >
-                  <Github size={16} />
-                  GitHub Code
-                </a>
-              </div>
-            </div>
-          ))}
-        </div>
+        {/* Personal Projects */}
+        <h3 id="personalProjects" className="text-2xl ml-6 font-semibold text-white mb-4 mt-6">
+          Personal Projects
+        </h3>
+        {renderProjectCards(personalProjects)}
+
+        {/* Client Projects */}
+        <h3 id="clintProjects" className="text-2xl font-semibold ml-6 text-white mb-4 mt-10">
+          Client Projects
+        </h3>
+        {renderProjectCards(clientProjects)}
       </div>
     </section>
   );

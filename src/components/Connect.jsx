@@ -8,6 +8,7 @@ import {
   Facebook,
 } from "lucide-react";
 import { section } from "framer-motion/client";
+import Heading from "./Heading";
 
 const Connect = () => {
   return (
@@ -16,17 +17,7 @@ const Connect = () => {
       className="w-11/12 flex items-center justify-center bg-transparent "
     >
       <div className="w-11/12 rounded-2xl ">
-        <div className="flex items-center gap-3 mb-4">
-          <img
-            src="/connect.png"
-            alt="Logo"
-            className="w-12 h-12 filter invert"
-          />
-
-          <h2 className="relative text-4xl font-semibold text-white after:block after:h-[5px] after:w-full after:bg-white after:transition-all after:duration-500 after:origin-left hover:after:bg-gradient-to-r hover:after:from-purple-500 hover:after:to-pink-500">
-            Let's Connect
-          </h2>
-        </div>
+        <Heading icon={"/connect.png"} text={"Let's Connect"}/>
 
         <p className="text-lg sm:text-xl leading-relaxed font-normal text-white p-5">
           I'm always open to discussing new projects, collaborations, or just

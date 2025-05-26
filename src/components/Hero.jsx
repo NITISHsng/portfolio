@@ -1,10 +1,10 @@
-import React, { useRef } from "react";
+import React, { useRef , useEffect} from "react";
 import { BsGithub, BsLinkedin, BsTwitter, BsYoutube } from "react-icons/bs";
 import { motion } from "framer-motion";
 import Split from "./Split";
-import HangingPhoto from "./HangingPhoto";
+// import { Link } from 'react-router-dom';
 import { useGSAP } from "@gsap/react";
-import { image } from "framer-motion/client";
+// import { image } from "framer-motion/client";
 import gsap from "gsap";
 
 
@@ -96,8 +96,76 @@ const Hero = () => {
 
 
 
+
+    const cursorRef = useRef(null);
+  const contenarRef = useRef(null);
+
+  const handleCursor = (e) => {
+    gsap.to(cursorRef.current, {
+      x: e.clientX,
+      y: e.clientY,
+      // duration: 0.1,
+      // ease: 'power2.out',
+    });
+  };
+
+  useEffect(() => {
+    const contenar = contenarRef.current;
+    const text = nameRef.current;
+
+    // Attach mousemove to box2 only
+    if (contenar) {
+      contenar.addEventListener('mousemove', handleCursor);
+    }
+
+    // Enlarge cursor when hovering text
+    const enlarge = () => {
+      gsap.to(cursorRef.current, {
+        width: 80,
+        height: 80,
+        duration: 0.2,
+       ease: "elastic.out(1,0.3)",
+
+      });
+    };
+
+    const shrink = () => {
+      gsap.to(cursorRef.current, {
+        width: 20,
+        height: 20,
+        duration: 0.2,
+        ease: 'power2.out',
+      });
+    };
+
+    if (text) {
+      text.addEventListener('mouseenter', enlarge);
+      text.addEventListener('mouseleave', shrink);
+    }
+
+    // Cleanup
+    return () => {
+      if (contenar) {
+        contenar.removeEventListener('mousemove', handleCursor);
+      }
+      if (text) {
+        text.removeEventListener('mouseenter', enlarge);
+        text.removeEventListener('mouseleave', shrink);
+      }
+    };
+  }, []);
+
   return (
-    <section id="home">
+    <section id="home" ref={contenarRef}>
+            <div
+        ref={cursorRef}
+        className="bg-white rounded-full fixed pointer-events-none z-50 mix-blend-difference transform duration-10"
+        style={{
+          width: '20px',
+          height: '20px',
+          transform: 'translate(-50%, -50%)',
+        }}
+      ></div>
       <div className="min-h-screen flex flex-col md:flex-row justify-center items-center text-white gap-3 md:p-10">
 
         <div ref={imageRef} className="order-1 md:order-2 flex justify-center items-center text-center mt-[-50px]">
@@ -194,16 +262,8 @@ rotate-180"
             rootMargin="-50px"
           />
           </div>
-<div ref={buttonRef} className="flex flex-col sm:flex-row justify-center md:justify-start items-center gap-6 ">
-  <div>  
-        <a
-      href="/Nitish_Chandra_Singha_CV.pdf"
-      download
-      className="inline-block bg-wgite border-2 border-white text-white py-2 px-6 rounded-2xl hover:bg-black/70 font-semibold "
-    >
-      Download CV
-    </a>
-  </div>
+<div ref={buttonRef}  className="flex flex-col sm:flex-row justify-center md:justify-start items-center gap-6 ">
+
 
   <motion.div
     initial={{ opacity: 0, y: -20, scale: 1.5 }}
@@ -226,6 +286,15 @@ rotate-180"
       </a>
     ))}
   </motion.div>
+    <div >  
+        <a
+      href="/Nitish_Chandra_Singha_CV.pdf"
+      download
+      className="inline-block bg-wgite border-2 border-white text-white py-2 px-6 rounded-2xl hover:bg-black/70 font-semibold "
+    >
+      Download CV
+    </a>
+  </div>
 </div>
         </div>
       </div>

@@ -16,6 +16,7 @@ import { SiTailwindcss, SiC } from "react-icons/si";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Heading from "./Heading";
 const skills = [
   {
     name: "JavaScript",
@@ -40,7 +41,7 @@ gsap.registerPlugin(ScrollTrigger);
 const Skils = () => {
   useGSAP(()=>{
 
-    gsap.to("#items .abc", {
+  gsap.to("#items .abc", {
   opacity: 1,
   y:30,
   stagger:.2,
@@ -55,35 +56,6 @@ const Skils = () => {
 
 
 
-gsap.to("#MySkills", {
-  opacity: 1,
-  duration: 0.5,
-  scrollTrigger: {
-    trigger: "#skills", // <-- fixed here
-    start: "top 90%",
-    end: "top 50%",
-    // scrub: 2,
-  },
-});
-
-gsap.fromTo(
-  "#skillsUnderline",
-  { scaleX: 0, transformOrigin: "left" },
-  {
-    scaleX: 1,
-    duration: 2,
-    delay: 1,
-    scrollTrigger: {
-      trigger: "#skills", // <-- fixed here too
-      start: "top 90%",
-      end: "top 50%",
-      scrub: true,
-      // markers: true,
-    },
-  }
-);
-
-
      
   })
   return (
@@ -92,22 +64,8 @@ gsap.fromTo(
       className=" flex items-center justify-center  z-4 w-full min-h-[40vh]"
     >
       <div className="w-11/12 rounded-2xl">
-        {/* Header */}
-        <div id="MySkills" className="flex items-center gap-3 opacity-0">
-          <img
-            src="/skill.svg"
-            alt="Logo"
-            className="w-12 h-12 filter invert"
-          />
 
-           <h2 className="text-4xl font-semibold text-white relative group">
-  Skills
-  <span
-    id="skillsUnderline"
-    className="block h-[5px] w-full bg-white transition-all duration-300 group-hover:bg-gradient-to-r group-hover:from-purple-500 group-hover:to-pink-500"
-  ></span>
-</h2>
-        </div>
+        <Heading icon={"/skill.svg"} text={"Skills"}/>
 
         {/* Skills Grid */}
         <div id="items" className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 p-5">

@@ -1,5 +1,4 @@
 import React from 'react';
-import Particles from './components/ui/Particles';
 import './App.css';
 import Navber from './components/Navber';
 import Hero from './components/Hero';
@@ -9,7 +8,6 @@ import Project from './components/Project';
 import Connect from './components/Connect';
 import StretchableLine from './components/ui/StretchableLine';
 import BackDrop from './components/ui/BackDrop';
-
 function App() {
   return (
     <div className="relative">
@@ -28,7 +26,6 @@ function App() {
 
         <Project />
         <StretchableLine />
-
         <Connect />
       </div>
     </div>

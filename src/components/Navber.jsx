@@ -147,7 +147,7 @@ const Navbar = () => {
           ))}
         </ul>
       </div>
-      <div className=" hidden lg:flex h-[20px] w-fit justify-center items-center hover:items-start transform transition-all duration-300"> 
+      <div className=" hidden lg:flex h-[20px] w-fit justify-center items-center  transform transition-all duration-300"> 
          <a
       href="/Nitish_ch_singha_resume.pdf"
       download

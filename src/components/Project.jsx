@@ -100,7 +100,7 @@ const Project = () => {
       {list.map((project, index) => (
         <div
           key={index}
-          className="project border border-white/10 rounded-xl p-5 hover:border-white/20 transition z-10"
+          className="project relative border border-white/10 rounded-xl p-5 hover:border-white/20 transition z-10"
         >
           <h3 className="text-xl font-semibold text-white mb-2">
             {project.title}
@@ -118,7 +118,10 @@ const Project = () => {
               </span>
             ))}
           </div>
-          <div className="flex gap-3">
+          <div className="h-8 w-[100%">
+
+          </div>
+          <div className="flex gap-3 absolute bottom-4">
             <a
               href={project.projectLink}
               target="_blank"
@@ -174,3 +177,5 @@ const Project = () => {
 };
 
 export default Project;
+
+

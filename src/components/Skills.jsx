@@ -41,7 +41,9 @@ gsap.registerPlugin(ScrollTrigger);
 const Skils = () => {
   useGSAP(()=>{
 
-  gsap.to("#items .abc", {
+  gsap.fromTo("#items .skill",{
+    opacity:0,
+  }, {
   opacity: 1,
   y:30,
   stagger:.2,
@@ -50,7 +52,7 @@ const Skils = () => {
     trigger: "#items", 
     start: "top 90%",
     end: "top 50%",
-    scrub: 2,
+    // scrub: 2,
   },
 });
 
@@ -72,7 +74,7 @@ const Skils = () => {
           {skills.map((skill, index) => (
             <div
               key={index}
-              className="abc bg-white/10 text-white rounded-xl p-4 flex items-center gap-3 shadow hover:bg-white/20 transition opacity-0"
+              className="skill bg-white/10 text-white rounded-xl p-4 flex items-center gap-3 shadow hover:bg-white/20 transition opacity-0"
             >
               {skill.icon}
               <span className="text-base">{skill.name}</span>
@@ -85,3 +87,4 @@ const Skils = () => {
 };
 
 export default Skils;
+

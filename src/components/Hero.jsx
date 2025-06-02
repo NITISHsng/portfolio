@@ -24,17 +24,20 @@ const Hero = () => {
         opacity: 0,
         delay: 0.7,
         scale: 0.1,
+         immediateRender: true,
       });
       tl.from(nameRef.current, {
         x: 50,
         duration: 0.4,
         opacity: 0,
         delay: 0.1,
+         immediateRender: true,
       });
       tl.from(iamRef.current, {
         y: 50,
         duration: 0.4,
         opacity: 0,
+         immediateRender: true,
       });
       tl.from(textRef.current, {
         y: 50,
@@ -184,7 +187,7 @@ rotate-180"
             <div className="relative bg-[#1f242d] z-[10] aspect-square rounded-full flex justify-center items-center overflow-hidden">
               <div className="relative w-full h-full scale-x-[-1]">
                 <img
-                  src="myimg.png"
+                  src="myimg.webp"
                   alt="Logo"
                   className="w-full h-full  scale-110 object-contain mix-blend-lighten absolute top-0 right-0 brightness-120 hover:scale-135  transform transition-transform duration-300 ease-in-out transform-origin-center"
                 />
@@ -274,33 +277,40 @@ rotate-180"
                 {
                   href: "https://github.com/NITISHsng",
                   icon: <BsGithub size={22} />,
+                  label: "GitHub Profile" 
                 },
                 {
                   href: "https://www.linkedin.com/in/nitish-singha",
                   icon: <BsLinkedin size={22} />,
+                  label: "Linkedin Profile" 
                 },
                 {
                   href: "https://x.com/NitishSing63297",
                   icon: <BsTwitter size={22} />,
+                  label: "Twitter Profile" 
                 },
                 {
                   href: "mailto:singhanitish20022@gmail.com?subject=Let's Connect&body=Hi Nitish,%0D%0A%0D%0AI found your portfolio and would like to get in touch with you",
                   icon: <Mail size={22} />,
+                  label: "Mail" 
                 },
-              ].map(({ href, icon }, index) => (
-                <div className="h-full flex justify-center items-center w-20 hover:items-start transform duration-300 ">
-                  <span className="border-2 border-white rounded-full p-[10px] ">
-                    <a
-                      key={index}
-                      href={href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className=" hover:bg-black/70 w-full"
-                    >
-                      <span className="">{icon}</span>
-                    </a>
-                  </span>
-                </div>
+              ].map(({ href, icon , label}, index) => (
+        <div
+    key={index}
+    className="h-full flex justify-center items-center w-20 hover:items-start transform duration-300"
+  >
+    <span className="border-2 border-white rounded-full p-[10px]">
+      <a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="hover:bg-black/70 w-full"
+        aria-label={label}  // Now label is defined and used here
+      >
+        <span>{icon}</span>
+      </a>
+    </span>
+  </div>
               ))}
             </div>
 

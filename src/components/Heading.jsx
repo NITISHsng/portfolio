@@ -14,18 +14,22 @@ const Heading = ({icon,text}) => {
     if (projectsRef.current) {
        gsap.fromTo(
         contanarRef.current,
-        { x:200,opacity:0 },
+        { x:100,opacity:0 },
         {
           x:0,
           opacity:1,
+              duration: 2.5,
+    ease: "elastic.out(1, 0.4)",
           scrollTrigger: {
             trigger: projectsRef.current,
             start: 'top 90%',
             end: 'top 50%',
-            scrub: true,
+            // scrub: true,
+            
           },
         }
       );
+
 
       gsap.fromTo(
         underlineRef.current,

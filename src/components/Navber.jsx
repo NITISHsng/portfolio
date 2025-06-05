@@ -29,7 +29,7 @@ const Navbar = () => {
     const handleResize = () => setWidth(window.innerWidth);
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  }, [window]);
 
   // Desktop animation
   if (width >= 1024) {
@@ -38,16 +38,15 @@ const Navbar = () => {
       tl.from(navRef.current, {
         y: -60,
         opacity: 0,
-        duration: 0.4,
         delay: 0.2,
-        duration:2.5,
+        duration:2,
         ease: "elastic.out(1,0.4)",
       });
    tl.from(ulRef.current?.querySelectorAll("li") || [], {
   y: -50,
   opacity: 0,
   stagger: 0.1,
-  duration: 2.5,
+  duration: 2,
   ease: "elastic.out(1,0.4)",
 }, "-=2");
     }, { scope: navRef });

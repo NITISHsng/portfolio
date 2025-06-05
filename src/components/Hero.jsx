@@ -230,7 +230,7 @@ rotate-180"
             className="flex justify-center left-[-100px]  relative md:justify-start md:left-0 "
             style={{ fontFamily: "monospace" }}
           >
-            <h2 className="text-3xl mb-6 relative inline-block ">
+            <h2 className="text-2xl mb-6 relative inline-block ">
               I'm a&nbsp;
               <span className="relative w-[50px]">
                 <span

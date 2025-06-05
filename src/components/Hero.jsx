@@ -24,20 +24,20 @@ const Hero = () => {
         opacity: 0,
         delay: 0.7,
         scale: 0.1,
-         immediateRender: true,
+        immediateRender: true,
       });
       tl.from(nameRef.current, {
         x: 50,
         duration: 0.4,
         opacity: 0,
         delay: 0.1,
-         immediateRender: true,
+        immediateRender: true,
       });
       tl.from(iamRef.current, {
         y: 50,
         duration: 0.4,
         opacity: 0,
-         immediateRender: true,
+        immediateRender: true,
       });
       tl.from(textRef.current, {
         y: 50,
@@ -200,23 +200,38 @@ rotate-180"
         {/* Text and Links Section */}
         <div className="relative order-2 md:order-1 max-w-2xl text-center md:text-left md-[60px]">
           <div ref={nameRef}>
-            <Split
-              text="Nitish Chandra Singha"
-              className="lg:text-5xl text-3xl text-center font-bold relative "
-              delay={100}
-              animationFrom={{ opacity: 0, transform: "translate3d(0,50px,0)" }}
-              animationTo={{ opacity: 1, transform: "translate3d(0,0,0)" }}
-              easing="easeOutCubic"
-              threshold={0.2}
-              rootMargin="-50px"
-            />
+            <h1
+              style={{
+                fontSize: "100px",
+                fontWeight: "bold",
+                color: "transparent",
+                fontFamily: "cursive",
+                WebkitTextStroke: "1px white",
+                textStroke: "2px white",
+              }}
+            >
+              <Split
+                text="Nitish Chandra Singha"
+                className="lg:text-5xl text-3xl text-center font-bold relative "
+                delay={100}
+                animationFrom={{
+                  opacity: 0,
+                  transform: "translate3d(0,50px,0)",
+                }}
+                animationTo={{ opacity: 1, transform: "translate3d(0,0,0)" }}
+                easing="easeOutCubic"
+                threshold={0.2}
+                rootMargin="-50px"
+              />
+            </h1>
           </div>
           <div
             ref={iamRef}
             className="flex justify-center left-[-100px]  relative md:justify-start md:left-0 "
+            style={{ fontFamily: "monospace" }}
           >
             <h2 className="text-3xl mb-6 relative inline-block ">
-              I'm a &nbsp;
+              I'm a&nbsp;
               <span className="relative w-[50px]">
                 <span
                   data-text="B.Tech&nbsp;Student"
@@ -277,48 +292,49 @@ rotate-180"
                 {
                   href: "https://github.com/NITISHsng",
                   icon: <BsGithub size={22} />,
-                  label: "GitHub Profile" 
+                  label: "GitHub Profile",
                 },
                 {
                   href: "https://www.linkedin.com/in/nitish-singha",
                   icon: <BsLinkedin size={22} />,
-                  label: "Linkedin Profile" 
+                  label: "Linkedin Profile",
                 },
                 {
                   href: "https://x.com/NitishSing63297",
                   icon: <BsTwitter size={22} />,
-                  label: "Twitter Profile" 
+                  label: "Twitter Profile",
                 },
                 {
                   href: "mailto:singhanitish20022@gmail.com?subject=Let's Connect&body=Hi Nitish,%0D%0A%0D%0AI found your portfolio and would like to get in touch with you",
                   icon: <Mail size={22} />,
-                  label: "Mail" 
+                  label: "Mail",
                 },
-              ].map(({ href, icon , label}, index) => (
-        <div
-    key={index}
-    className="h-full flex justify-center items-center w-20 hover:items-start transform duration-300"
-  >
-    <span className="border-2 border-white rounded-full p-[10px]">
-      <a
-        href={href}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="hover:bg-black/70 w-full"
-        aria-label={label}  // Now label is defined and used here
-      >
-        <span>{icon}</span>
-      </a>
-    </span>
-  </div>
+              ].map(({ href, icon, label }, index) => (
+                <div
+                  key={index}
+                  className="h-full flex justify-center items-center w-20 hover:items-start transform duration-300"
+                >
+                  <span className="border-2 border-white rounded-full p-[10px]">
+                    <a
+                      href={href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:bg-black/70 w-full"
+                      aria-label={label} 
+                    >
+                      <span>{icon}</span>
+                    </a>
+                  </span>
+                </div>
               ))}
             </div>
 
             <div className="h-full w-fit flex justify-center items-center hover:items-start transform transition-all duration-300">
               <a
-                href="/Nitish_ch_singha_resume.pdf"
-                download
-                className="gap-2 flex hover:bottom-20 bg-wgite border-2 border-white text-white py-1 px-5 rounded-[5px] hover:bg-black/70 font-semibold "
+                href="/devnitishx.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="gap-2 flex hover:bottom-20 bg-wgite border-2 border-white text-white py-1 px-5 rounded-[5px] hover:bg-black/70 font-semibold"
               >
                 Resume <Download size={16} className="relative top-[4px]" />
               </a>

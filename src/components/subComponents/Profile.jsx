@@ -10,14 +10,15 @@ const Profile = () => {
      const tl = gsap.timeline({delay:0.3});
       screenWidth.add("(min-width: 300px) and (max-width: 1023px)", () => {
       tl.fromTo(imageRef.current, {
-        y: -70,
-        duration: 0.5,
+        y: -80,
         opacity: 0,
       },{
         y: 0,
-        duration: 0.3,
+        delay:.3,
+        duration: 0.4,
         opacity: 1,
-      });
+      }
+    );
     })
       
    screenWidth.add("(min-width: 1024px)", () => {

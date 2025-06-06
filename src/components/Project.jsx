@@ -7,16 +7,16 @@ import Heading from "./Heading";
 gsap.registerPlugin(ScrollTrigger);
 
 const projects = [
-  {
-    title: "ToDo App",
+    {
+    title: "Hostel Mess Management",
     description:
-      "A simple and responsive task manager to add, delete, and mark tasks as completed. Designed with a clean UI using HTML, CSS, JS.",
-    technologies: ["HTML", "CSS", "JavaScript"],
-    projectLink: "https://toxyz.netlify.app/",
-    codeLink: "https://github.com/NITISHsng/Todo",
+      "A full-stack system to manage daily meal entries, expense calculations, and reports for hostel mess. User login and real-time DB via Firebase.",
+    technologies: ["React", "Tailwind CSS", "Firebase"],
+    projectLink: "https://hostelmess.netlify.app/",
+    codeLink: "https://github.com/NITISHsng/Mess",
     type: "personal",
   },
-  {
+    {
     title: "GuessKaro Game",
     description:
       "A number guessing game with coin rewards, level system, and random card generation. Real-time updates using Firebase Firestore.",
@@ -26,14 +26,16 @@ const projects = [
     type: "personal",
   },
   {
-    title: "Hostel Mess Management",
+    title: "ToDo App",
     description:
-      "A full-stack system to manage daily meal entries, expense calculations, and reports for hostel mess. User login and real-time DB via Firebase.",
-    technologies: ["React", "Tailwind CSS", "Firebase"],
-    projectLink: "https://hostelmess.netlify.app/",
-    codeLink: "https://github.com/NITISHsng/Mess",
+      "A simple and responsive task manager to add, delete, and mark tasks as completed. Designed with a clean UI using HTML, CSS, JS.",
+    technologies: ["HTML", "CSS", "JavaScript"],
+    projectLink: "https://toxyz.netlify.app/",
+    codeLink: "https://github.com/NITISHsng/Todo",
     type: "personal",
   },
+
+
   {
     title: "SinghaInfra",
     description:
@@ -154,7 +156,13 @@ const Project = () => {
       <div className="w-11/12 rounded-2xl py-6">
 
       <Heading icon={"/project.png"} text={"Projects"}/>
-
+           {/* Client Projects */}
+        <h3 id="clientProjects" className="text-2xl font-semibold ml-6 text-white mb-4 mt-10">
+          Client Projects
+        </h3>
+        <div className="clientProjects">
+          {renderProjectCards(clientProjects)}
+        </div>
         {/* Personal Projects */}
         <h3 id="personalProjects" className="text-2xl ml-6 font-semibold text-white mb-4 mt-6">
           Personal Projects
@@ -164,13 +172,7 @@ const Project = () => {
         {renderProjectCards(personalProjects)}
         </div>
 
-        {/* Client Projects */}
-        <h3 id="clientProjects" className="text-2xl font-semibold ml-6 text-white mb-4 mt-10">
-          Client Projects
-        </h3>
-        <div className="clientProjects">
-          {renderProjectCards(clientProjects)}
-        </div>
+     
       </div>
     </section>
   );

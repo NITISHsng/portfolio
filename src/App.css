@@ -1,8 +1,11 @@
 body{
     background-color: #1f242d;
+    overflow-x: hidden;
     /* background-color: black; */
 }
-
+  /* html {
+  scroll-behavior: smooth;
+} */
 .particles-container {
   position: relative;
   width: 100%;

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import {
   Mail,
   Linkedin,
@@ -9,8 +9,16 @@ import {
 } from "lucide-react";
 import { section } from "framer-motion/client";
 import Heading from "./Heading";
-
+import { gsap } from "gsap";
 const Connect = () => {
+  
+
+    const container=useRef(null);
+    // useEffect(() => {
+       
+    // }, [])
+    
+
   return (
     <section
       id="contact"
@@ -25,7 +33,7 @@ const Connect = () => {
           of the platforms below.
         </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-5">
+        <div ref={container} className="relative grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-5">
           <a
             href="mailto:singhanitish20022@gmail.com?subject=Let's Connect&body=Hi Nitish,%0D%0A%0D%0AI found your portfolio and would like to get in touch with you."
             target="_blank"
@@ -70,7 +78,7 @@ const Connect = () => {
             href="https://github.com/NITISHsng"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 px-4 py-2 relative  justify-center border-2 border-white/10 p-2 rounded-md text-white "
+            className="flex items-center gap-2 px-4 py-2 border relative justify-center border-white/10 rounded-md text-white hover:bg-white hover:text-black transition"
           >
             <Github size={18} />
             <span>GitHub</span>
@@ -79,8 +87,9 @@ const Connect = () => {
             href="https://m.facebook.com/niti.sng/"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 px-4 py-2 justify-center  relative border border-white/10 rounded-md text-white hover:bg-white hover:text-black transition"
+            className="flex items-center gap-2 px-4 py-2 border relative justify-center border-white/10 rounded-md text-white hover:bg-white hover:text-black transition"
           >
+            {/* <img src="mylogo2.png" alt="facebook" className="absolute bottom-10 w-full" /> */}
             <Facebook size={18} />
             <span>Facebook</span>
           </a>

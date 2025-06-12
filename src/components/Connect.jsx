@@ -7,9 +7,9 @@ import {
   Github,
   Facebook,
 } from "lucide-react";
-import { section } from "framer-motion/client";
+// import { section } from "framer-motion/client";
 import Heading from "./Heading";
-import { gsap } from "gsap";
+// import { gsap } from "gsap";
 const Connect = () => {
   
 

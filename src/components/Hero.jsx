@@ -102,7 +102,7 @@ const Hero = () => {
             <Split
               text="I create beautiful and functional websites using React, Tailwind CSS, and modern frontend technologies."
               className="text-center relative"
-              delay={80}
+              delay={50}
               animationFrom={{
                 opacity: 0,
                 transform: "translate3d(-10px, 50px, 0)",

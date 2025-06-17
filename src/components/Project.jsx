@@ -64,7 +64,7 @@ const Project = () => {
       opacity: 1,
       duration:1,
       y:0,
-      delay:0.4,
+      delay:0.3,
       duration: 0.5,
       scrollTrigger: {
         trigger: "#clientProjects",
@@ -85,7 +85,7 @@ const Project = () => {
       opacity: 1,
       duration:1,
       y:0,
-      delay:0.4,
+      delay:0.3,
       duration: 0.5,
       scrollTrigger: {
         trigger: "#personalProjects",

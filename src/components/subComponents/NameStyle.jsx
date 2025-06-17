@@ -15,7 +15,7 @@ const NameStyle = () => {
       },
     {
         x: 0,
-        duration: 0.6,
+        duration: 0.4,
         opacity: 1,
         delay: 0.1,
         // immediateRender: true,  

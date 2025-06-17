@@ -13,7 +13,7 @@ const SocialLink = () => {
         },{
         y: 0,
         opacity: 1,
-        stagger: 0.07,
+        stagger: 0.03,
         duration: 2.5,
         ease: "elastic.out(1,0.6)",
       });

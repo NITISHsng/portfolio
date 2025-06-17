@@ -7,6 +7,7 @@ import Profile from "./subComponents/Profile";
 import Iam from "./Iam";
 import SocialLink from "./subComponents/SocialLink";
 import ScrollDown from "./subComponents/ScrollDown";
+
 const Hero = () => {
   const textRef = useRef(null);
   const cursorRef = useRef(null);
@@ -37,8 +38,8 @@ const Hero = () => {
 
     const enlarge = () => {
       gsap.to(cursorRef.current, {
-        width: 80,
-        height: 80,
+        width: 100,
+        height: 100,
         duration: 0.2,
         ease: "elastic.out(1, 0.3)",
       });
@@ -102,7 +103,7 @@ const Hero = () => {
             <Split
               text="I create beautiful and functional websites using React, Tailwind CSS, and modern frontend technologies."
               className="text-center relative"
-              delay={50}
+              delay={40}
               animationFrom={{
                 opacity: 0,
                 transform: "translate3d(-10px, 50px, 0)",

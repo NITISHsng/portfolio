@@ -12,7 +12,7 @@ const Iam = () => {
         opacity: 0,
       },{
         y: 0,
-        duration:1,
+        duration:.3,
         opacity: 1,
         ease: "power3.out",
       });

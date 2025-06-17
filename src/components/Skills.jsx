@@ -46,8 +46,8 @@ const Skils = () => {
   }, {
   opacity: 1,
   y:30,
-  stagger:.2,
-  duration: 0.5,
+  stagger:.1,
+  duration: 0.4,
   scrollTrigger: {
     trigger: "#items", 
     start: "top 90%",

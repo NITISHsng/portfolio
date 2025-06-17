@@ -8,18 +8,18 @@ const ScrollDown = () => {
   const scrollDown = useRef(null);
 
   useEffect(() => {
-    gsap.to("#contenar",{
-     transformOrigin:'top center',
-      rotateX:150,
-      opacity:0,
-      scrollTrigger:{
-        trigger:"#contenar",
-        // markers:true,
-        start:"top 85%",
-        end:"top 70%",
-        scrub:true
-      }
-    })
+    // gsap.to("#contenar",{
+    //  transformOrigin:'top center',
+    //   rotateX:150,
+    //   opacity:0,
+    //   scrollTrigger:{
+    //     trigger:"#contenar",
+    //     // markers:true,
+    //     start:"top 85%",
+    //     end:"top 70%",
+    //     scrub:true
+    //   }
+    // })
     const tl = gsap.timeline({ repeat: -1 });
    gsap.fromTo(scrollDown.current,{
       transformOrigin:'top center',
@@ -29,7 +29,7 @@ const ScrollDown = () => {
       
       rotateX:0,
       duration:7,
-        delay:3,
+        delay:2.5,
         ease:"elastic.out(1,0.3)",
         opacity:1,
     });

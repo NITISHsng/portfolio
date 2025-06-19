@@ -1,6 +1,7 @@
 import React, { useRef, useEffect } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+
 import Split from "./subComponents/Split";
 import NameStyle from "./subComponents/NameStyle";
 import Profile from "./subComponents/Profile";
@@ -12,32 +13,40 @@ const Hero = () => {
   const textRef = useRef(null);
   const cursorRef = useRef(null);
   const containerRef = useRef(null);
-  const namebox= useRef(null);
+  const namebox = useRef(null);
 
   // Animate text on mount
   useGSAP(() => {
-    const tl=gsap.timeline({delay:2.8});
-    tl.from(textRef.current, {
+    gsap.timeline({ delay: 2.8 }).from(textRef.current, {
       y: 50,
       duration: 0.2,
       opacity: 0,
     });
+
+    // Center cursor from the middle
+    gsap.set(cursorRef.current, {
+      xPercent: -50,
+      yPercent: -50,
+    });
   }, []);
 
-  // Custom cursor movement and scaling
+  // Custom cursor movement and hover effect
   useEffect(() => {
-    const container = containerRef.current;
+    const cursor = cursorRef.current;
     const nameHover = namebox.current;
 
+    if (!cursor || !nameHover) return;
+
+    const xTo = gsap.quickTo(cursor, "x", { duration: 0.2, ease: "power3" });
+    const yTo = gsap.quickTo(cursor, "y", { duration: 0.2, ease: "power3" });
+
     const handleCursor = (e) => {
-      gsap.to(cursorRef.current, {
-        x: e.clientX,
-        y: e.clientY,
-      });
+      xTo(e.clientX);
+      yTo(e.clientY);
     };
 
     const enlarge = () => {
-      gsap.to(cursorRef.current, {
+      gsap.to(cursor, {
         width: 100,
         height: 100,
         duration: 0.2,
@@ -46,7 +55,7 @@ const Hero = () => {
     };
 
     const shrink = () => {
-      gsap.to(cursorRef.current, {
+      gsap.to(cursor, {
         width: 20,
         height: 20,
         duration: 0.2,
@@ -54,31 +63,26 @@ const Hero = () => {
       });
     };
 
-    if (container) {
-      window.addEventListener("mousemove", handleCursor);
-      nameHover.addEventListener("mouseenter", enlarge);
+    window.addEventListener("mousemove", handleCursor);
+    nameHover.addEventListener("mouseenter", enlarge);
     nameHover.addEventListener("mouseleave", shrink);
-    }
 
     return () => {
-      if (container) {
-        window.removeEventListener("mousemove", handleCursor);
-        nameHover.removeEventListener("mouseenter", enlarge);
-        nameHover.removeEventListener("mouseleave", shrink);
-      }
+      window.removeEventListener("mousemove", handleCursor);
+      nameHover.removeEventListener("mouseenter", enlarge);
+      nameHover.removeEventListener("mouseleave", shrink);
     };
   }, []);
 
   return (
-    <section id="home" ref={containerRef}  className="h-screen relative">
+    <section id="home" ref={containerRef} className="h-screen relative">
       {/* Custom Cursor */}
       <div
         ref={cursorRef}
-        className="bg-white rounded-full fixed pointer-events-none z-50 mix-blend-difference transform duration-10"
+        className="bg-white rounded-full fixed pointer-events-none z-50 mix-blend-difference"
         style={{
           width: "20px",
           height: "20px",
-          transform: "translate(-50%, -50%)",
         }}
       ></div>
 
@@ -98,7 +102,7 @@ const Hero = () => {
 
           <span
             ref={textRef}
-            className=" lg:text-lg text-[14px] leading-relaxed font-xl p-2 m-3"
+            className="lg:text-lg text-[14px] leading-relaxed font-xl p-2 m-3"
           >
             <Split
               text="I create beautiful and functional websites using React, Tailwind CSS, and modern frontend technologies."
@@ -119,7 +123,7 @@ const Hero = () => {
           <SocialLink />
         </div>
       </div>
-      <ScrollDown/>
+      <ScrollDown />
     </section>
   );
 };

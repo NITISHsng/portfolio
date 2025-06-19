@@ -1,6 +1,6 @@
-import React, { useEffect, useState,useRef } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import gsap from "gsap";
-import emailjs from '@emailjs/browser';
+import emailjs from "@emailjs/browser";
 
 import ScrollTrigger from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
@@ -15,8 +15,8 @@ import {
 } from "lucide-react";
 import Heading from "./Heading";
 
-const Connect = () => {
 
+const Connect = () => {
   const container = useRef(null);
   const linkRefs = useRef([]);
 
@@ -59,55 +59,52 @@ const Connect = () => {
     },
   ];
 
-  
-useEffect(() => {
-  gsap.fromTo(
-    ".linkTag",
-    {
-      y: 40,
-      opacity: 0,
-    },
-    {
-      y: 0,
-      opacity: 1,
-      duration: 1,
-      ease: "power3.out",
-      stagger: 0.1,
-      scrollTrigger: {
-        trigger: container.current,
-        start: "top 80%",
-        end: "top 50%",
-        toggleActions: "play none none reverse",
+  useEffect(() => {
+    gsap.fromTo(
+      ".linkTag",
+      {
+        y: 40,
+        opacity: 0,
       },
-    }
-  );
-}, []);
-
+      {
+        y: 0,
+        opacity: 1,
+        duration: 1,
+        ease: "power3.out",
+        stagger: 0.1,
+        scrollTrigger: {
+          trigger: container.current,
+          start: "top 80%",
+          end: "top 50%",
+          toggleActions: "play none none reverse",
+        },
+      }
+    );
+  }, []);
 
   const form = useRef();
 
-const [loading, setLoading] = useState(null);
+  const [loading, setLoading] = useState(null);
 
-const sendEmail = (e) => {
-  e.preventDefault();
-  setLoading(true); // Start loading
+  const sendEmail = (e) => {
+    e.preventDefault();
+    setLoading(true); // Start loading
 
-  emailjs
-    .sendForm('service_6oh3xut', 'template_f9x4xch', form.current, {
-      publicKey: 'Vas56VMdiGEXnDjuW',
-    })
-    .then(() => {
-      console.log('SUCCESS!');
-      form.current.reset();
-      setLoading(false); // Show "Sent"
-      setTimeout(() => setLoading(null), 2000); // Hide after 2 sec
-    })
-    .catch((error) => {
-      console.log('FAILED...', error.text);
-      setLoading(null); // Reset even on failure
-    });
-};
-
+    emailjs
+      .sendForm("service_6oh3xut", "template_f9x4xch", form.current, {
+        publicKey: "Vas56VMdiGEXnDjuW",
+      })
+      .then(() => {
+        console.log("SUCCESS!");
+        form.current.reset();
+        setLoading(false); // Show "Sent"
+        setTimeout(() => setLoading(null), 2000); // Hide after 2 sec
+      })
+      .catch((error) => {
+        console.log("FAILED...", error.text);
+        setLoading(null); // Reset even on failure
+      });
+  };
 
   return (
     <section
@@ -117,15 +114,21 @@ const sendEmail = (e) => {
       <div className="w-full rounded-2xl">
         <Heading icon={"/connect.png"} text={"Let's Connect"} />
 
-       <div className="bg-black/10 lg:mx-20">
-         <p className="text-lg sm:text-xl leading-relaxed font-normal text-white p-5 text-center">
-   I'm always excited to connect with fellow developers, discuss new ideas, collaborate on projects, or just have a friendly chat. Reach out through any of the platforms below — I’d love to hear from you!
-        </p>
-       </div>
+        <div className="bg-black/10 lg:mx-20">
+          <p className="text-lg sm:text-xl leading-relaxed font-normal text-white p-5 text-center">
+            I'm always excited to connect with fellow developers, discuss new
+            ideas, collaborate on projects, or just have a friendly chat. Reach
+            out through any of the platforms below — I’d love to hear from you!
+          </p>
+        </div>
 
         <div className="flex flex-col lg:flex-row gap-8 p-5">
           {/* Contact Form */}
-          <form ref={form} onSubmit={sendEmail} className="flex relative flex-col gap-4 w-full lg:w-2/3">
+          <form
+            ref={form}
+            onSubmit={sendEmail}
+            className="flex relative flex-col gap-4 w-full lg:w-2/3"
+          >
             <input
               type="text"
               name="name"
@@ -150,19 +153,17 @@ const sendEmail = (e) => {
             >
               Send Message
             </button>
-{loading === true && (
-  <div className="absolute bottom-[-40px] left-1/2 transform -translate-x-1/2 text-white border border-white/10 px-4 py-1 text-center rounded-md">
-    Please wait, your message is sending...
-  </div>
-)}
+            {loading === true && (
+              <div className="absolute bottom-[-40px] left-1/2 transform -translate-x-1/2 text-white border border-white/10 px-4 py-1 text-center rounded-md">
+                Please wait, your message is sending...
+              </div>
+            )}
 
-{loading === false && (
-  <div className="absolute bottom-[-40px] left-1/2 transform -translate-x-1/2 text-white border border-white/10 px-4 py-1 text-center rounded-md">
-    Your message has been sent!
-  </div>
-)}
-
-
+            {loading === false && (
+              <div className="absolute bottom-[-40px] left-1/2 transform -translate-x-1/2 text-white border border-white/10 px-4 py-1 text-center rounded-md">
+                Your message has been sent!
+              </div>
+            )}
           </form>
 
           {/* Social Links */}
@@ -177,14 +178,14 @@ const sendEmail = (e) => {
                 target="_blank"
                 rel="noopener noreferrer"
                 ref={(el) => (linkRefs.current[index] = el)}
-                className="linkTag group relative flex items-center gap-2 px-4 py-2 border justify-center border-white/10 rounded-md text-white hover:bg-white hover:text-black transition" // Make sure overflow-hidden is added
+                className="linkTag group relative flex items-center gap-2 px-4 py-2 border justify-center border-white/10 rounded-md text-white hover:bg-white hover:text-black transition"
               >
                 {/* Image Wrapper */}
                 <div className="absolute bottom-0 left-0 w-full h-full pointer-events-none ">
                   <img
                     src={image}
                     alt={text}
-                    className="w-full h-[107px] z-100 transform translate-y-0 opacity-0 transition-all duration-1000 group-hover:translate-y-[-110%] group-hover:opacity-100"
+                    className="w-full h-[107px] z-100 transform translate-y-0 opacity-0 transition-all duration-500 group-hover:translate-y-[-110%] group-hover:opacity-100"
                   />
                 </div>
 
@@ -195,22 +196,23 @@ const sendEmail = (e) => {
           </div>
         </div>
 
-  <div className="bg-black/10 lg:mx-20">
-    
-         <p style={{
-          // fontWeight: "bold",
-                fontSize:"25px",
-                // color: "transparent",
-                fontFamily:"monospace",
-                // WebkitTextStroke: "0.4px white",
-                // textStroke: ".5px white",
-
-         }} 
-         
-         className="text-[12px] leading-relaxed font-normal text-white p-5 text-center">
-        Whether it's a quick question, a collaboration proposal, or just a hello — I'm just a message away. Let’s build something great together!
-        </p>
-       </div>
+        <div className="bg-black/10 lg:mx-20">
+          <p
+            style={{
+              fontWeight: "bold",
+              // fontSize: "25px",
+              color: "transparent",
+              fontFamily:"cursive",
+              WebkitTextStroke: "0.4px white",
+              textStroke: ".5px white",
+            }}
+            className="text-[20px] md:text-2xl leading-relaxed font-normal text-white p-5 text-center"
+          >
+            Whether it's a quick question, a collaboration proposal, or just a
+            hello — I'm just a message away. Let’s build something great
+            together!
+          </p>
+        </div>
 
 
       </div>

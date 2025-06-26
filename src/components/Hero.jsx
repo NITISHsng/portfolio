@@ -47,8 +47,8 @@ const Hero = () => {
 
     const enlarge = () => {
       gsap.to(cursor, {
-        width: 100,
-        height: 100,
+        width: 130,
+        height: 130,
         duration: 0.2,
         ease: "elastic.out(1, 0.3)",
       });
@@ -75,7 +75,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section id="home" ref={containerRef} className="h-screen relative">
+    <section id="home" ref={containerRef} className="h-screen relative w-screen overflow-x-hidden">
       {/* Custom Cursor */}
       <div
         ref={cursorRef}

@@ -85,22 +85,22 @@ const Profile = () => {
               className="w-full h-full group-hover:scale-105 object-contain mix-blend-lighten absolute top-0 right-0 transform transition-transform duration-300 ease-in-out origin-[70%_10%]"
             />
           <div>
-              <span className="absolute top-[15%] left-[20%] z-50 opacity-0 scale-130 transition-all duration-300 group-hover:opacity-10 group-hover:scale-125">
+              <span className="absolute top-[15%] left-[20%] z-50 opacity-0 hover:scale-130 transition-all duration-950 group-hover:opacity-10 group-hover:scale-125">
               <IoCodeSlash className='size-5 md:size-8'/>
             </span>
-              <span className="absolute top-[50%] left-[12%] z-50 opacity-0 scale-130 transition-all duration-300 group-hover:opacity-10 group-hover:scale-125">
+              <span className="absolute top-[45%] left-[12%] z-50 opacity-0 hover:scale-130 transition-all duration-950 group-hover:opacity-10 group-hover:scale-125">
               <TbBrandReact className='size-5 md:size-8'/>
             </span>
-              <span className="absolute top-[80%] left-[20%] z-50 opacity-0 scale-130 transition-all duration-300 group-hover:opacity-10 group-hover:scale-125">
+              <span className="absolute top-[80%] left-[20%] z-50 opacity-0 hover:scale-130 transition-all duration-950 group-hover:opacity-10 group-hover:scale-125">
               <TbWorldWww className='size-5 md:size-8'/>
             </span>
-              <span className="absolute top-[15%] left-[72%] z-50 opacity-0 scale-130 transition-all duration-300 group-hover:opacity-10 group-hover:scale-125">
+              <span className="absolute top-[15%] left-[72%] z-50 opacity-0 hover:scale-130 transition-all duration-950 group-hover:opacity-10 group-hover:scale-125">
               <VscVscode className='size-5 md:size-8'/>
             </span>
-              <span className="absolute top-[50%] left-[84%] z-50 opacity-0 scale-130 transition-all duration-300 group-hover:opacity-10 group-hover:scale-125">
+              <span className="absolute top-[45%] left-[84%] z-50 opacity-0 hover:scale-130 transition-all duration-950 group-hover:opacity-10 group-hover:scale-125">
               <FaLaptopCode className='size-5 md:size-8'/>
             </span>
-              <span className="absolute top-[80%] left-[72%] z-50 opacity-0 scale-130 transition-all duration-300 group-hover:opacity-10 group-hover:scale-125">
+              <span className="absolute top-[80%] left-[72%] z-50 opacity-0 hover:scale-130 transition-all duration-950 group-hover:opacity-10 group-hover:scale-125">
               <LuSquareCode className='size-5 md:size-8'/>
             </span>
            

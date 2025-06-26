@@ -115,7 +115,7 @@ const Connect = () => {
         <Heading icon={"/connect.png"} text={"Let's Connect"} />
 
         <div className="bg-black/10 lg:mx-20">
-          <p className="text-lg sm:text-xl leading-relaxed font-normal text-white p-5 text-center">
+          <p className="text-[20px] md:text-2xl leading-relaxed font-normal text-white p-5 text-center">
             I'm always excited to connect with fellow developers, discuss new
             ideas, collaborate on projects, or just have a friendly chat. Reach
             out through any of the platforms below — I’d love to hear from you!
@@ -202,9 +202,9 @@ const Connect = () => {
               fontWeight: "bold",
               // fontSize: "25px",
               color: "transparent",
-              fontFamily:"cursive",
+              fontFamily:"monospace",
               WebkitTextStroke: "0.4px white",
-              textStroke: ".5px white",
+              textStroke: ".2px white",
             }}
             className="text-[20px] md:text-2xl leading-relaxed font-normal text-white p-5 text-center"
           >

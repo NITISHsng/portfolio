@@ -66,7 +66,7 @@ export default function StretchableLine() {
   }, [dimensions]);
 
   return (
-    <div className="w-full flex justify-center items-center z-0 ">
+    <div className="w-full flex justify-center items-center z-0 overflow-x-hidden">
       <div
         ref={containerRef}
         className="w-full max-w-[1400px] h-[100px] "

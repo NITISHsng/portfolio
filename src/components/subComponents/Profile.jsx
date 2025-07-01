@@ -13,45 +13,40 @@ const Profile = () => {
   const wrapperRef = useRef(null);
   const screenWidth = gsap.matchMedia();
 
-  // Initial mount animation
+
+
+
   useEffect(() => {
-    const tl = gsap.timeline({ delay: 0.3 });
+  const mm = gsap.matchMedia();
 
-    screenWidth.add("(min-width: 300px) and (max-width: 1023px)", () => {
-      tl.fromTo(wrapperRef.current, {
-        y: -80,
-        opacity: 0,
-      }, {
-        y: 0,
-        delay: .3,
-        duration: 0.4,
-        opacity: 1,
-      });
-    });
-
-    screenWidth.add("(min-width: 1024px)", () => {
-      tl.fromTo(wrapperRef.current, {
-        x: 300,
-        opacity: 0,
-      }, {
-        x: 0,
-        duration: 0.6,
-        opacity: 1,
-      });
-    });
-  }, []);
-
-  // Animate image on hover change
-  useEffect(() => {
-    if (!imageRef.current) return;
-    gsap.fromTo(imageRef.current, {
-      opacity: 0.6,
+  mm.add("(min-width: 300px) and (max-width: 1023px)", () => {
+    const mobileTL = gsap.timeline();
+    mobileTL.fromTo(wrapperRef.current, {
+      y: -80,
+      opacity: 0,
     }, {
-      opacity: 1,
+      y: 0,
       duration: 0.4,
+      opacity: 1,
       ease: "power2.out"
     });
-  }, [isHovered]);
+  });
+
+  mm.add("(min-width: 1024px)", () => {
+    const desktopTL = gsap.timeline();
+    desktopTL.fromTo(wrapperRef.current, {
+      x: 300,
+      opacity: 0,
+    }, {
+      x: 0,
+      duration: 0.6,
+      opacity: 1,
+      ease: "power2.out"
+    });
+  });
+
+  return () => mm.revert(); // clean up on unmount
+}, []);
 
   return (
     <div

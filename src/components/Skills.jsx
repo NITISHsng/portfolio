@@ -9,8 +9,11 @@ import {
   DiReact,
   DiPython,
   DiDatabase,
+  DiNodejs,
 
 } from "react-icons/di";
+import { SiNextdotjs } from "react-icons/si";
+
 import { GiSaphir } from "react-icons/gi";
 import { SiTailwindcss, SiC } from "react-icons/si";
 import gsap from "gsap";
@@ -23,6 +26,8 @@ const skills = [
     icon: <DiJavascript className="text-white" size={36} />,
   },
   { name: "React.js", icon: <DiReact className="text-white" size={36} /> },
+  { name: "Nodejs", icon: <DiNodejs className="text-white" size={36} /> },
+  { name: "Nextjs", icon: <SiNextdotjs className="text-white" size={36} /> },
   { name: "HTML", icon: <DiHtml5 className="text-white" size={36} /> },
   { name: "CSS", icon: <DiCss3 className="text-white" size={36} /> },
   {

@@ -40,17 +40,17 @@ const ScrollDown = () => {
         );
         tl.fromTo(
           [arrowRef1.current, arrowRef2.current],
-          { y: -10, opacity: 1, opacity:1 },
+          { y: -10, opacity: 1, },
           { y: 0, opacity: 0.5, duration: 0.3, ease: "power1.inOut", stagger: 0.2 }
         );
         tl.fromTo(
           [arrowRef1.current, arrowRef2.current],
-          { y: 0, opacity: 1, opacity:1 },
+          { y: 0, opacity: 1},
           { y: 10, opacity: 0.5, duration: 0.3, ease: "power1.inOut", stagger: 0.2 }
         );
         tl.fromTo(
           [arrowRef1.current, arrowRef2.current],
-          { y: 10, opacity: 1, opacity:1 },
+          { y: 10, opacity: 1 },
           { y: 20, opacity: 0.5, duration: 0.3, ease: "power1.inOut", stagger: 0.2 }
         );
 }, []);

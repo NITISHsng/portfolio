@@ -67,7 +67,6 @@ const Project = () => {
       },
       {
       opacity: 1,
-      duration:1,
       y:0,
       delay:0.3,
       duration: 0.5,
@@ -88,7 +87,6 @@ const Project = () => {
       },
       {
       opacity: 1,
-      duration:1,
       y:0,
       delay:0.3,
       duration: 0.5,

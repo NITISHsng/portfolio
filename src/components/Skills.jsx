@@ -10,10 +10,12 @@ import {
   DiPython,
   DiDatabase,
   DiNodejs,
-
 } from "react-icons/di";
+import { SiVercel } from "react-icons/si";
+import { DiMongodb } from "react-icons/di";
+import { DiFirebase } from "react-icons/di";
+import { SiNetlify } from "react-icons/si";
 import { SiNextdotjs } from "react-icons/si";
-
 import { GiSaphir } from "react-icons/gi";
 import { SiTailwindcss, SiC } from "react-icons/si";
 import gsap from "gsap";
@@ -21,27 +23,26 @@ import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Heading from "./Heading";
 const skills = [
-  {
-    name: "JavaScript",
-    icon: <DiJavascript className="text-white" size={36} />,
-  },
+  { name: "JavaScript", icon: <DiJavascript className="text-white" size={36} /> },
   { name: "React.js", icon: <DiReact className="text-white" size={36} /> },
-  { name: "Nodejs", icon: <DiNodejs className="text-white" size={36} /> },
-  { name: "Nextjs", icon: <SiNextdotjs className="text-white" size={36} /> },
+  { name: "Node.js", icon: <DiNodejs className="text-white" size={36} /> },
+  { name: "Next.js", icon: <SiNextdotjs className="text-white" size={36} /> },
   { name: "HTML", icon: <DiHtml5 className="text-white" size={36} /> },
   { name: "CSS", icon: <DiCss3 className="text-white" size={36} /> },
-  {
-    name: "Tailwind CSS",
-    icon: <SiTailwindcss className="text-white" size={36} />,
-  },
-  { name: "Gsap", icon: <GiSaphir className="text-white" size={36} /> },
+  { name: "Tailwind CSS", icon: <SiTailwindcss className="text-white" size={36} /> },
+  { name: "GSAP", icon: <GiSaphir className="text-white" size={36} /> },
   { name: "Git", icon: <DiGit className="text-white" size={36} /> },
   { name: "GitHub", icon: <DiGithub className="text-white" size={36} /> },
   { name: "Java", icon: <DiJava className="text-white" size={36} /> },
   { name: "C", icon: <SiC className="text-white" size={36} /> },
   { name: "Python", icon: <DiPython className="text-white" size={36} /> },
   { name: "SQL", icon: <DiDatabase className="text-white" size={36} /> },
+  { name: "MongoDB", icon: <DiMongodb className="text-white" size={36} /> },
+  { name: "Firebase", icon: <DiFirebase className="text-white" size={36} /> },
+  { name: "Vercel", icon: <SiVercel className="text-white" size={36} /> },
+  { name: "Netlify", icon: <SiNetlify className="text-white" size={36} /> },
 ];
+
 gsap.registerPlugin(ScrollTrigger);
 const Skils = () => {
   useGSAP(()=>{

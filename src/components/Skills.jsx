@@ -43,7 +43,6 @@ const skills = [
   { name: "Netlify", icon: <SiNetlify className="text-white" size={36} /> },
 ];
 
-
 gsap.registerPlugin(ScrollTrigger);
 const Skils = () => {
   useGSAP(()=>{

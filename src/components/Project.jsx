@@ -7,9 +7,18 @@ import Heading from "./Heading";
 gsap.registerPlugin(ScrollTrigger);
 
 const projects = [
+      {
+    title: "AsanCapture",
+    description:
+      "AsanCapture creates high-quality photo and video content for weddings, events, and corporate projects with a professional team and 4K/8K output.",
+    technologies: ["react", "next.js", "tailwind css", "mongodb","shadcn ui","lucide-react","..etc"],
+    projectLink: "https://asancapture.in",
+    codeLink: "https://github.com/NITISHsng/",
+    landingPage:"asancapture.png",
+    type: "personal",
+  },
     {
     title: "Hostel Mess Management",
-
     description:
       "A full-stack system to manage daily meal entries, expense calculations, and reports for hostel mess. User login and real-time DB via Firebase.",
     technologies: ["React", "Tailwind CSS", "Firebase"],
@@ -18,6 +27,15 @@ const projects = [
     landingPage:"hostelmess.png",
     type: "personal",
   },
+{
+  title: "Portfolio",
+  description: "My personal portfolio showcasing projects, skills, and web development work using modern frontend technologies.",
+  technologies: ["Next.js", "GSAP", "EmailJS", "Tailwind CSS"],
+  projectLink: "https://devnitishx.vercel.app/",
+  codeLink: "https://github.com/NITISHsng/portfolio",
+  landingPage: "portfolio.png",
+  type: "personal",
+},
     {
     title: "GuessKaro Game",
     description:
@@ -38,6 +56,15 @@ const projects = [
     landingPage:"todoapp.png",
     type: "personal",
   },
+  {
+    title: "Sticky Notes & Todos Extention",
+    description: "A browser extension that allows users to take notes and create to-do lists. replesh your sticky notes papers",
+    technologies: ["HTML", "CSS", "JavaScript"],
+    projectLink: "https://github.com/NITISHsng",
+    codeLink: "https://github.com/NITISHsng",
+    landingPage:"sticky.png",
+    type: "personal",
+  },
 
 
   {
@@ -48,6 +75,24 @@ const projects = [
     projectLink: "https://singhainfra.in",
     codeLink: "https://github.com/nitish-s/san-construction",
     landingPage:"singhainfra.png",
+    type: "client",
+  },
+  {
+    title: "Kachakali Vision Care",
+    description:"Deliver exceptional vision care with integrated appointments, patient records, and clinical workflows—powered by modern technology and expert care.",
+    technologies: ["next.js","tailwind css","mongodb","shadcn ui"],
+    projectLink: "https://visioncare-g9ve.vercel.app/",
+    codeLink: "https://github.com/NITISHsng",
+    landingPage:"kvc.png",
+    type: "client",
+  },
+  {
+    title: "bandhanbank SIP calculator",
+    description:"An internal SIP calculator for Bandhan Bank staff to quickly estimate investment growth using compound interest and visualize long-term returns.",
+    technologies: ["next.js","tailwind css","mongodb","shadcn ui","lucide-react","..etc"],
+    projectLink: "https://bandhanbank.singhainfra.in",
+    codeLink: "https://github.com/NITISHsng",
+    landingPage:"bandhanbank.png",
     type: "client",
   },
 ];
@@ -115,7 +160,7 @@ const Project = () => {
 
   {/* Foreground content */}
   <div className="relative z-10">
-    <h3 className="text-xl font-semibold text-white mb-2">{project.title}</h3>
+    <h3 className="text-xl font-semibold text-white mb-2"><a href={project.projectLink}>{project.title}</a></h3>
     <p className="text-white/70 text-lg sm:text-xl mb-3">{project.description}</p>
     <div className="mb-4 flex flex-wrap gap-2">
       {project.technologies.map((tech, idx) => (

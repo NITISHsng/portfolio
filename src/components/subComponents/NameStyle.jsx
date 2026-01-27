@@ -31,7 +31,7 @@ const NameStyle = () => {
                 fontWeight: "bold",
                 // fontSize:"60px",
                 color: "transparent",
-                fontFamily: "cursive",
+                fontFamily: "'Dancing Script', cursive",
                 WebkitTextStroke: "1px white",
                 textStroke: "2px white",
               }}

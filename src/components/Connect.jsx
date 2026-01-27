@@ -202,11 +202,10 @@ const Connect = () => {
               fontWeight: "bold",
               // fontSize: "25px",
               color: "transparent",
-              fontFamily:"monospace",
               WebkitTextStroke: "0.4px white",
               textStroke: ".2px white",
             }}
-            className="text-[20px] md:text-2xl leading-relaxed font-normal text-white p-5 text-center"
+            className="text-[20px] md:text-2xl leading-relaxed font-normal text-white p-5 text-center handwriting-font"
           >
             Whether it's a quick question, a collaboration proposal, or just a
             hello — I'm just a message away. Let’s build something great

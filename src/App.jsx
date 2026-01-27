@@ -8,6 +8,7 @@ import Project from './components/Project';
 import Connect from './components/Connect';
 import StretchableLine from './components/ui/StretchableLine';
 import BackDrop from './components/ui/BackDrop';
+
 function App() {
   return (
     <div className="relative w-screen overflow-x-hidden">

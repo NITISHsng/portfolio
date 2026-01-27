@@ -90,24 +90,24 @@ const About = () => {
 
         <p id="para1" className="text-lg sm:text-xl leading-relaxed font-normal text-white p-5 opacity-0">
           <span className="font-semibold text-gray-400 text-3xl hover:text-gray-100 hover:scale-1.2"> Hello!</span>{" "}
-          I'm Nitish Chandra Singha, a Computer Science student at{" "}
+          I'm <span className="handwriting-font text-3xl">Nitish Chandra Singha</span>, a Computer Science student at{" "}
           <span className="font-semibold text-gray-400 text-xl"> GCELT</span>(
           Government college of Engineering and Leather Technology ) with a
-          strong passion for frontend development. I specialize in building
-          responsive and modern web applications using technologies like React ,
-          Gsap , Tailwind CSS etc... I enjoy turning creative ideas into
+          strong passion for web development. I specialize in building
+          responsive and modern web applications using technologies like React, Next.js,
+          Node.js, Express.js, MongoDB, Gsap , Tailwind CSS etc... I enjoy turning creative ideas into
           interactive and functional interfaces that offer great user
           experiences.
         </p>
         <br />
-        <p id="para2" className="text-lg sm:text-xl leading-relaxed font-normal text-white p-5 opacity-0">
+        {/* <p id="para2" className="text-lg sm:text-xl leading-relaxed font-normal text-white p-5 opacity-0">
           I'm currently exploring UI/UX design to better understand visual
           hierarchy, color theory, typography, and user behavior. This knowledge
           helps me create more intuitive and visually appealing designs. I
           believe that good design is not just how it looks, but how it works.
-        </p>
+        </p> */}
         <br />
-        <p id="para3" className="text-lg sm:text-xl leading-relaxed font-normal text-white p-5 opacity-0">
+        {/* <p id="para3" className="text-lg sm:text-xl leading-relaxed font-normal text-white p-5 opacity-0">
           <span className="font-semibold text-gray-400 text-3xl hover:text-gray-100 hover:scale-1.2">
             {" "}
             Over time,{" "}
@@ -123,14 +123,14 @@ const About = () => {
           </span>{" "}
           These projects have taught me a lot about clean code, performance, and
           problem-solving in real scenarios.
-        </p>
+        </p> */}
         <br />
-        <p  id="para4"className=" text-lg sm:text-xl leading-relaxed font-normal text-white p-5 opacity-0">
+        {/* <p  id="para4"className=" text-lg sm:text-xl leading-relaxed font-normal text-white p-5 opacity-0">
           I’m always eager to learn new technologies, improve my design
           thinking, and work on projects that challenge and grow my skillset. My
           goal is to become a well-rounded developer who can contribute
           meaningfully to both frontend engineering and user experience design.
-        </p>
+        </p> */}
         {/* <StretchableLine/> */}
       </div>
     </section>

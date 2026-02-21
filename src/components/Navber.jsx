@@ -134,7 +134,7 @@ const Navbar = () => {
             >
               <a
                 href={`#${text.toLowerCase()}`}
-                className="text-white no-underline md:hover:bg-black/30 py-1 px-2 rounded-[10px] hover:scale-105 shadow-2xl hover:shadow-black/100"
+                className="text-white no-underline transition-all duration-300 md:hover:bg-white/10 py-1 px-3 rounded-[10px] hover:scale-110 hover:shadow-[0_0_15px_rgba(255,255,255,0.2)] inline-block"
               >
                 {text}
               </a>

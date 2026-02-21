@@ -26,7 +26,7 @@ const SocialLink = () => {
                 className="flex flex-col sm:flex-row justify-center md:justify-start items-center h-[80px] mt-8 gap-6"
               >
                 
-                <div className=" flex items-center h-full gap-0">
+                <div className="flex items-center h-full gap-4">
                   {[
                     {
                       href: "https://github.com/NITISHsng",
@@ -51,31 +51,29 @@ const SocialLink = () => {
                   ].map(({ href, icon, label }, index) => (
                     <div
                       key={index}
-                      className="h-full flex justify-center items-center w-20 hover:items-start transform duration-300"
+                      className="group relative"
                     >
-                      <span className="border-2 border-white rounded-full p-[10px]">
-                        <a
-                          href={href}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="hover:bg-black/70 w-full"
-                          aria-label={label} 
-                        >
-                          <span>{icon}</span>
-                        </a>
-                      </span>
+                      <a
+                        href={href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex justify-center items-center w-12 h-12 border-2 border-white/50 rounded-full text-white transition-all duration-300 hover:scale-110 hover:border-white hover:bg-white/10 hover:shadow-[0_0_20px_rgba(255,255,255,0.3)]"
+                        aria-label={label}
+                      >
+                        {icon}
+                      </a>
                     </div>
                   ))}
                 </div>
     
-                <div className="h-full w-fit flex justify-center items-center hover:items-start transform transition-all duration-300">
+                <div className="flex justify-center items-center">
                   <a
                     href="/devnitishx.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="gap-2 flex hover:bottom-20 bg-wgite border-2 border-white text-white py-1 px-5 rounded-[5px] hover:bg-black/70 font-semibold"
+                    className="flex items-center gap-2 border-2 border-white/50 text-white py-2 px-6 rounded-lg font-semibold transition-all duration-300 hover:scale-105 hover:border-white hover:bg-white/10 hover:shadow-[0_0_20px_rgba(255,255,255,0.2)] active:scale-95"
                   >
-                    Resume <Download size={16} className="relative top-[4px]" />
+                    Resume <Download size={18} />
                   </a>
                 </div>
               </div>

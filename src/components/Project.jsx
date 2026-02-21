@@ -150,11 +150,11 @@ const Project = () => {
       {list.map((project, index) => (
 <div
   key={index}
-  className="project group relative border border-white/10 rounded-xl p-5 pb-16 hover:border-white/20 transition z-10 overflow-hidden"
+  className="project group relative border border-white/10 rounded-xl p-5 pb-16 transition-all duration-500 z-10 overflow-hidden hover:-translate-y-2 hover:border-white/30 hover:shadow-[0_20px_40px_rgba(0,0,0,0.4)]"
 >
   {/* Background image */}
 <div
-  className="absolute inset-0 bg-center bg-cover opacity-0 transition-all duration-300 group-hover:opacity-100  group-hover:brightness-50 z-0"
+  className="absolute inset-0 bg-center bg-cover opacity-0 transition-all duration-500 group-hover:opacity-100 group-hover:blur-xs group-hover:scale-110 group-hover:brightness-50 z-0"
   style={{ backgroundImage: `url(${project.landingPage})` }}
 />
 

@@ -51,13 +51,17 @@ const Heading = ({ icon, text }) => {
   return (
     <div className="w-screen overflow-hidden">
       <div ref={projectsRef}>
-        <div ref={contanarRef} className="flex items-center gap-3 mb-6">
-          <img src={icon} alt="Logo" className="w-12 h-12 filter invert" />
-          <h2 className="text-4xl font-semibold text-white relative group">
+        <div ref={contanarRef} className="flex items-center gap-5 mb-8 group cursor-default">
+          <img 
+            src={icon} 
+            alt="Logo" 
+            className="w-12 h-12 filter invert transition-all duration-300 group-hover:scale-110 group-hover:rotate-6" 
+          />
+          <h2 className="text-4xl font-semibold text-white relative">
             {text}
             <span
               ref={underlineRef}
-              className="block h-[5px] w-full bg-white transition-all duration-300 group-hover:bg-gradient-to-r group-hover:from-purple-500 group-hover:to-pink-500"
+              className="block h-[4px] mt-1 w-full bg-white transition-all duration-500 group-hover:bg-gradient-to-r group-hover:from-cyan-500 group-hover:to-blue-500"
             ></span>
           </h2>
         </div>

@@ -178,7 +178,7 @@ const Connect = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 ref={(el) => (linkRefs.current[index] = el)}
-                className="linkTag group relative flex items-center gap-2 px-4 py-2 border justify-center border-white/10 rounded-md text-white hover:bg-white hover:text-black transition"
+                className="linkTag group relative flex items-center gap-2 px-4 py-2 border justify-center border-white/10 rounded-md text-white transition-all duration-300 hover:scale-105 hover:bg-white/10 hover:shadow-[0_0_15px_rgba(255,255,255,0.1)] hover:border-white/30"
               >
                 {/* Image Wrapper */}
                 <div className="absolute bottom-0 left-0 w-full h-full pointer-events-none ">

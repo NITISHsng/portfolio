@@ -1,26 +1,10 @@
-import React, { useEffect, useRef } from "react";
-import { IoCodeSlash } from "react-icons/io5";
-import { LuSquareCode } from "react-icons/lu";
-import { FaLaptopCode } from "react-icons/fa";
-import { VscVscode } from "react-icons/vsc";
-import {
-  TbWorldWww,
-  TbBrandReact,
-  TbBrandNextjs,
-  TbBrandTailwind,
-} from "react-icons/tb";
-import {
-  SiJavascript,
-  SiHtml5,
-  SiCss3,
-  SiGit,
-  SiNodedotjs,
-} from "react-icons/si";
+import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 
 const Profile = () => {
   const imageRef = useRef(null);
   const wrapperRef = useRef(null);
+  const [isHovered, setIsHovered] = useState(false);
 
   useEffect(() => {
     const mm = gsap.matchMedia();
@@ -59,7 +43,7 @@ const Profile = () => {
       );
     });
 
-    return () => mm.revert(); // clean up on unmount
+    return () => mm.revert();
   }, []);
 
   return (
@@ -91,49 +75,6 @@ const Profile = () => {
               alt="Logo"
               className="w-full h-full z-20 group-hover:scale-105 object-contain mix-blend-lighten absolute top-0 right-0 transform transition-transform duration-300 ease-in-out origin-[70%_10%]"
             />
-            <div className="relative  w-full h-full">
-              {/* Existing icons */}
-              <span className="absolute top-[15%] left-[20%] z-50 opacity-0 hover:scale-130 transition-all duration-950 group-hover:opacity-10 group-hover:scale-125">
-                <IoCodeSlash className="size-5 md:size-8" />
-              </span>
-              <span className="absolute top-[45%] left-[12%] z-50 opacity-0 hover:scale-130 transition-all duration-950 group-hover:opacity-10 group-hover:scale-125">
-                <TbBrandReact className="size-5 md:size-8" />
-              </span>
-              <span className="absolute top-[30%] left-[20%] z-50 opacity-0 hover:scale-130 transition-all duration-950 group-hover:opacity-10 group-hover:scale-125">
-                <TbWorldWww className="size-5 md:size-8" />
-              </span>
-              <span className="absolute top-[15%] left-[72%] z-50 opacity-0 hover:scale-130 transition-all duration-950 group-hover:opacity-10 group-hover:scale-125">
-                <VscVscode className="size-5 md:size-8" />
-              </span>
-              <span className="absolute top-[45%] left-[84%] z-50 opacity-0 hover:scale-130 transition-all duration-950 group-hover:opacity-10 group-hover:scale-125">
-                <FaLaptopCode className="size-5 md:size-8" />
-              </span>
-              <span className="absolute top-[30%] left-[72%] z-50 opacity-0 hover:scale-130 transition-all duration-950 group-hover:opacity-10 group-hover:scale-125">
-                <LuSquareCode className="size-5 md:size-8" />
-              </span>
-
-              <span className="absolute top-[5%] left-[45%] z-50 opacity-0 hover:scale-130 transition-all duration-950 group-hover:opacity-10 group-hover:scale-125">
-                <SiJavascript className="size-5 md:size-8" />
-              </span>
-              <span className="absolute top-[50%] left-[70%] z-50 opacity-0 hover:scale-130 transition-all duration-950 group-hover:opacity-10 group-hover:scale-125">
-                <TbBrandNextjs className="size-5 md:size-8" />
-              </span>
-              <span className="absolute top-[27%] left-[10%] z-50 opacity-0 hover:scale-130 transition-all duration-950 group-hover:opacity-10 group-hover:scale-125">
-                <SiHtml5 className="size-5 md:size-8" />
-              </span>
-              <span className="absolute top-[66%] left-[7%] z-50 opacity-0 hover:scale-130 transition-all duration-950 group-hover:opacity-10 group-hover:scale-125">
-                <SiCss3 className="size-5 md:size-8" />
-              </span>
-              <span className="absolute top-[52%] left-[25%] z-50 opacity-0 hover:scale-130 transition-all duration-950 group-hover:opacity-10 group-hover:scale-125">
-                <TbBrandTailwind className="size-5 md:size-8" />
-              </span>
-              <span className="absolute top-[5%] left-[60%] z-50 opacity-0 hover:scale-130 transition-all duration-950 group-hover:opacity-10 group-hover:scale-125">
-                <SiNodedotjs className="size-5 md:size-8" />
-              </span>
-              <span className="absolute top-[5%] left-[25%] z-50 opacity-0 hover:scale-130 transition-all duration-950 group-hover:opacity-10 group-hover:scale-125">
-                <SiGit className="size-5 md:size-8" />
-              </span>
-            </div>
             <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/85 pointer-events-none" />
           </div>
         </div>

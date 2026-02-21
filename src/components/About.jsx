@@ -1,137 +1,125 @@
 import React from "react";
-import { UserCircle2 } from "lucide-react";
-import StretchableLine from "./ui/StretchableLine";
+import { Download, Mail, Phone } from "lucide-react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Heading from "./Heading";
 
 gsap.registerPlugin(ScrollTrigger);
+
 const About = () => {
-  
-  useGSAP(()=>{
+  useGSAP(() => {
+    gsap.from(".about-image", {
+      x: -120,
+      opacity: 0,
+      duration: 1,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: ".about-image",
+        start: "top 80%",
+      },
+    });
 
+    gsap.from(".about-content > *", {
+      x: 120,
+      opacity: 0,
+      duration: 0.8,
+      stagger: 0.2,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: ".about-content",
+        start: "top 80%",
+      },
+    });
+  });
 
-
-    gsap.to("#para1",{
-     duration:.5,
-     y:40,
-     opacity:1,
-     stagger:.9,
-     scrollTrigger:{
-       trigger: "#para1",
-       scroller: "body",
-      //  markers: true,
-       start: "top 80%",
-       end: "top 20%",
-       scrub: 2,
-     }
-   
-    })
-    gsap.to("#para2",{
-     duration:.5,
-     y:40,
-     opacity:1,
-     stagger:.9,
-     scrollTrigger:{
-       trigger: "#para2",
-       scroller: "body",
-      //  markers: true,
-       start: "top 80%",
-       end: "top 20%",
-       scrub: 2,
-       // pin: true,
-     }
-   
-    })
-    gsap.to("#para3",{
-     duration:.5,
-     y:40,
-     opacity:1,
-     stagger:.9,
-     scrollTrigger:{
-       trigger: "#para3",
-       scroller: "body",
-      //  markers: true,
-       start: "top 80%",
-       end: "top 20%",
-       scrub: 2,
-       // pin: true,
-     }
-   
-    })
-    gsap.to("#para4",{
-     duration:.5,
-     y:40,
-     opacity:1,
-     stagger:.9,
-     scrollTrigger:{
-       trigger: "#para4",
-       scroller: "body",
-      //  markers: true,
-       start: "top 80%",
-       end: "top 20%",
-       scrub: 2,
-       // pin: true,
-     }
-   
-    })
-    
-    
-  })
   return (
     <section
       id="about"
-      className=" flex items-center justify-center z-10"
+      className="relative py-24 text-white overflow-hidden"
     >
-      <div className="w-11/12 border-white/20 rounded-2xl py-6">
+      <div className="w-11/12 max-w-6xl mx-auto">
+        <Heading icon={"/about.svg"} text={" About Me"} />
 
-              <Heading icon={"/about.svg"} text={" About Me"}/>
+        <div className="flex flex-col lg:flex-row items-center gap-16 mt-16">
+          
+          {/* Image Column */}
+          <div className="about-image w-full lg:w-5/12 flex justify-center">
+            <div className="relative group">
+              <div className="absolute -inset-2 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-3xl blur-xl opacity-30 group-hover:opacity-60 transition duration-700"></div>
 
-        <p id="para1" className="text-lg sm:text-xl leading-relaxed font-normal text-white p-5 opacity-0">
-          <span className="font-semibold text-gray-400 text-3xl hover:text-gray-100 hover:scale-1.2"> Hello!</span>{" "}
-          I'm <span className="handwriting-font text-3xl">Nitish Chandra Singha</span>, a Computer Science student at{" "}
-          <span className="font-semibold text-gray-400 text-xl"> GCELT</span>(
-          Government college of Engineering and Leather Technology ) with a
-          strong passion for web development. I specialize in building
-          responsive and modern web applications using technologies like React, Next.js,
-          Node.js, Express.js, MongoDB, Gsap , Tailwind CSS etc... I enjoy turning creative ideas into
-          interactive and functional interfaces that offer great user
-          experiences.
-        </p>
-        <br />
-        {/* <p id="para2" className="text-lg sm:text-xl leading-relaxed font-normal text-white p-5 opacity-0">
-          I'm currently exploring UI/UX design to better understand visual
-          hierarchy, color theory, typography, and user behavior. This knowledge
-          helps me create more intuitive and visually appealing designs. I
-          believe that good design is not just how it looks, but how it works.
-        </p> */}
-        <br />
-        {/* <p id="para3" className="text-lg sm:text-xl leading-relaxed font-normal text-white p-5 opacity-0">
-          <span className="font-semibold text-gray-400 text-3xl hover:text-gray-100 hover:scale-1.2">
-            {" "}
-            Over time,{" "}
-          </span>{" "}
-          I’ve worked on various personal and collaborative projects, including
-          task management apps, games, and real-world websites like{" "}
-          <span className="font-semibold text-white text-2xl ">
-            {" "}
-            Singha
-            <span className="font-semibold text-green-600 text-2xl">
-              Infra
-            </span>{" "}
-          </span>{" "}
-          These projects have taught me a lot about clean code, performance, and
-          problem-solving in real scenarios.
-        </p> */}
-        <br />
-        {/* <p  id="para4"className=" text-lg sm:text-xl leading-relaxed font-normal text-white p-5 opacity-0">
-          I’m always eager to learn new technologies, improve my design
-          thinking, and work on projects that challenge and grow my skillset. My
-          goal is to become a well-rounded developer who can contribute
-          meaningfully to both frontend engineering and user experience design.
-        </p> */}
-        {/* <StretchableLine/> */}
+              <div className="relative rounded-3xl overflow-hidden border border-white/10 backdrop-blur-lg bg-white/5 shadow-2xl">
+                <img
+                  src="image.png"
+                  alt="Nitish"
+                  className="w-full h-[420px] object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+              </div>
+            </div>
+          </div>
+
+          {/* Content Column */}
+          <div className="about-content w-full lg:w-7/12 flex flex-col gap-8 text-center lg:text-left">
+            
+            {/* Intro */}
+            <div>
+              <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight">
+                Hi, I'm{" "}
+                <span className="bg-gradient-to-r from-cyan-400 to-blue-500 text-transparent bg-clip-text">
+                  Nitish
+                </span>
+              </h2>
+              <p className="text-cyan-400 font-medium mt-3 text-lg">
+                Computer Science Student • Full-Stack Developer
+              </p>
+            </div>
+
+            {/* Description */}
+            <p className="text-gray-300 text-lg leading-relaxed">
+              I specialize in building scalable, production-ready applications 
+              using <span className="text-white font-semibold">React, Node.js, and modern CSS frameworks</span>. 
+              I focus on performance, security, and crafting intuitive user 
+              experiences that deliver measurable real-world impact.
+            </p>
+
+            {/* Info Cards */}
+            <div className="grid sm:grid-cols-2 gap-6">
+              
+              <div className="flex items-center gap-4 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-cyan-400/40 transition-all duration-300">
+                <Mail className="text-cyan-400" />
+                <div>
+                  <p className="text-sm text-gray-400">Email</p>
+                  <p className="text-white font-medium">
+                    singhanitish829@gmail.com
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-4 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-cyan-400/40 transition-all duration-300">
+                <Phone className="text-cyan-400" />
+                <div>
+                  <p className="text-sm text-gray-400">Mobile</p>
+                  <p className="text-white font-medium">
+                    +91 8001338614
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Resume Button */}
+            <div>
+              <a
+                href="/devnitishx.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-600 py-3 px-8 rounded-xl font-semibold shadow-lg hover:scale-105 transition-all duration-300"
+              >
+                Download Resume <Download size={18} />
+              </a>
+            </div>
+
+          </div>
+        </div>
       </div>
     </section>
   );

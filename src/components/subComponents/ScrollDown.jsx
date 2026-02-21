@@ -57,7 +57,7 @@ const ScrollDown = () => {
 
   return (
 <div id="contenar" className="flex justify-center">
-      <div ref={scrollDown} className=" md:shadow-2xl shadow-xl shadow-white/15 text-2xl text-white md:h-25 h-16 md:w-11/12 w-screen flex justify-evenly items-center bg-black/20 absolute  md:rounded-2xl bottom-18">
+      <div ref={scrollDown} className=" md:shadow-2xl shadow-xl shadow-white/15 text-2xl text-white md:h-25 h-16 md:w-10/12 w-screen flex justify-evenly items-center bg-black/20 absolute  md:rounded-2xl bottom-18">
       
       <div className="hidden md:block">Connect</div>
 

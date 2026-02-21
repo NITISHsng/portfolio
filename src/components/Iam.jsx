@@ -31,11 +31,11 @@ const Iam = () => {
               I'm a&nbsp;
               <span className="relative w-[50px]">
                 <span
-                  data-text="B.Tech&nbsp;Student"
-                  className="role"
+                  data-text="DSA&nbsp;Learner"
+                  className="role text-red-500"
                   style={{ "--i": 0 }}
                 >
-                  B.Tech&nbsp;Student
+                  DSA&nbsp;Learner
                 </span>
                 <span
                   data-text="Tech&nbsp;Enthusiast"

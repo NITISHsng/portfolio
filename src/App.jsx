@@ -3,6 +3,7 @@ import './App.css';
 import Navber from './components/Navber';
 import Hero from './components/Hero';
 import About from './components/About';
+import Education from './components/Education';
 import Skills from './components/Skills';
 import Project from './components/Project';
 import Connect from './components/Connect';
@@ -22,6 +23,9 @@ function App() {
         <Hero />
          
         <About />
+        <StretchableLine />
+
+        <Education />
         <StretchableLine />
 
         <Skills />

@@ -87,11 +87,12 @@ const Hero = () => {
       ></div>
 
       {/* Layout */}
-      <div className="min-h-full flex flex-col md:flex-row justify-center items-center text-white gap-3 md:p-10">
+      <div className="min-h-full flex flex-col md:flex-row justify-center gap-10 items-center text-white gap-3 md:p-10">
         <Profile />
 
         {/* Text & Links */}
         <div className="relative top-[-30px] order-2 md:order-1 max-w-2xl text-center md:text-left">
+        
           <span ref={namebox}>
             <NameStyle />
           </span>
@@ -99,11 +100,11 @@ const Hero = () => {
             <Iam />
           </span>
 
-          <span
+          {/* <span
             ref={textRef}
             className="lg:text-lg text-[14px] leading-relaxed font-xl p-2 m-3"
-          >
-            <Split
+          > */}
+            {/* <Split
               text="Transforming ideas into exceptional web experiences.
 I create fast, scalable, and beautifully designed websites that combine clean aesthetics with seamless functionality."
               className="text-center relative"
@@ -117,8 +118,8 @@ I create fast, scalable, and beautifully designed websites that combine clean ae
                 transform: "translate3d(0, 0, 0)",
               }}
               easing="easeOutCubic"
-            />
-          </span>
+            /> */}
+          {/* </span> */}
 
           <SocialLink />
         </div>

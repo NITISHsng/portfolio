@@ -51,21 +51,22 @@ const Profile = () => {
       ref={wrapperRef}
       className="order-1 md:order-2 flex justify-center items-center text-center mt-[-90px]"
     >
-      <div className="relative size-[30vw] max-h-[380px] max-w-[380px] min-h-[230px] min-w-[230px]  md:size-[30vw] rounded-full p-1 overflow-hidden">
+      <div className="relative size-[30vw] max-h-[380px] max-w-[380px] min-h-[230px] min-w-[230px] rounded-3xl p-1 overflow-hidden">
+        {/* Animated Border Layers */}
         <div
-          className="absolute inset-0 animate-spin-slow rounded-full 
-            before:content-[''] before:absolute before:top-0 before:left-0 before:w-full before:h-full before:rounded-full before:bg-[conic-gradient(transparent,transparent,transparent,#7cf03d)] 
-            after:content-[''] after:absolute after:top-0 after:left-0 after:w-full after:h-full after:rounded-full after:bg-[conic-gradient(transparent,transparent,transparent,#7cf03d)]"
+          className="absolute inset-0 animate-spin-slow scale-150
+            before:content-[''] before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-[conic-gradient(transparent,transparent,transparent,#7cf03d)] 
+            after:content-[''] after:absolute after:top-0 after:left-0 after:w-full after:h-full after:bg-[conic-gradient(transparent,transparent,transparent,#7cf03d)]"
         ></div>
 
         <div
-          className="absolute inset-0 animate-spin-slow rounded-full 
-            before:content-[''] before:absolute before:bottom-0 before:left-0 before:w-full before:h-full before:rounded-full before:bg-[conic-gradient(transparent,transparent,transparent,#7cf03d)] 
-            after:content-[''] after:absolute after:top-0 after:left-0 after:w-full after:h-full after:rounded-full after:bg-[conic-gradient(transparent,transparent,transparent,#7cf03d), conic-gradient(transparent,transparent,transparent,#7cf03d 180deg)] 
-            rotate-180"
+          className="absolute inset-0 animate-spin-slow scale-150 rotate-180
+            before:content-[''] before:absolute before:bottom-0 before:left-0 before:w-full before:h-full before:bg-[conic-gradient(transparent,transparent,transparent,#7cf03d)] 
+            after:content-[''] after:absolute after:top-0 after:left-0 after:w-full after:h-full after:bg-[conic-gradient(transparent,transparent,transparent,#7cf03d)_180deg]"
         ></div>
 
-        <div className="relative bg-[#1f242d] z-[10] aspect-square rounded-full flex justify-center items-center overflow-hidden">
+        {/* Content Container */}
+        <div className="relative bg-[#1f242d] z-[10] w-full h-full rounded-[22px] flex justify-center items-center overflow-hidden">
           <div className="group relative w-full h-full ">
             <img
               ref={imageRef}

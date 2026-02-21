@@ -31,7 +31,7 @@ export default function StretchableLine() {
       const x = e.clientX - rect.left;
       const y = e.clientY - rect.top;
 
-      if (y >= 40 && y <= 60) {
+      if (y >= 0 && y <= 100) {
         touchRef.current = true;
       }
 

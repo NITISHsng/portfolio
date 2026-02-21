@@ -51,7 +51,7 @@ const Profile = () => {
       ref={wrapperRef}
       className="order-1 md:order-2 flex justify-center items-center text-center mt-[-90px]"
     >
-      <div className="relative size-[30vw] max-h-[380px] max-w-[380px] min-h-[230px] min-w-[230px] rounded-3xl p-1 overflow-hidden">
+      <div className="relative size-[35vw] max-h-[320px] max-w-[320px] min-h-[230px] min-w-[230px] rounded-3xl p-1 overflow-hidden">
         {/* Animated Border Layers */}
         <div
           className="absolute inset-0 animate-spin-slow scale-150

@@ -91,11 +91,10 @@ const Hero = () => {
         <Profile />
 
         {/* Text & Links */}
-        <div className="relative order-2 md:order-1 max-w-2xl text-center md:text-left">
+        <div className="relative top-[-30px] order-2 md:order-1 max-w-2xl text-center md:text-left">
           <span ref={namebox}>
             <NameStyle />
           </span>
-
           <span className="bg-cyan-700">
             <Iam />
           </span>
@@ -105,7 +104,8 @@ const Hero = () => {
             className="lg:text-lg text-[14px] leading-relaxed font-xl p-2 m-3"
           >
             <Split
-              text="I create beautiful and functional websites using React, Tailwind CSS, and modern frontend technologies."
+              text="Transforming ideas into exceptional web experiences.
+I create fast, scalable, and beautifully designed websites that combine clean aesthetics with seamless functionality."
               className="text-center relative"
               delay={40}
               animationFrom={{

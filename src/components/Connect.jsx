@@ -85,6 +85,16 @@ const Connect = () => {
   const form = useRef();
 
   const [loading, setLoading] = useState(null);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -97,6 +107,7 @@ const Connect = () => {
       .then(() => {
         console.log("SUCCESS!");
         form.current.reset();
+        setFormData({ name: "", email: "", message: "" }); // Clear state
         setLoading(false); // Show "Sent"
         setTimeout(() => setLoading(null), 2000); // Hide after 2 sec
       })
@@ -132,18 +143,24 @@ const Connect = () => {
             <input
               type="text"
               name="name"
+              value={formData.name}
+              onChange={handleChange}
               placeholder="Your Name"
               className="bg-white/10 text-white p-3 rounded-md border border-white/10 placeholder:text-white focus:outline-none focus:ring-2 focus:ring-white/20"
             />
             <input
               type="email"
               name="email"
+              value={formData.email}
+              onChange={handleChange}
               placeholder="Your Email"
               className="bg-white/10 text-white p-3 rounded-md border border-white/10 placeholder:text-white focus:outline-none focus:ring-2 focus:ring-white/20"
             />
             <textarea
               rows="5"
               name="message"
+              value={formData.message}
+              onChange={handleChange}
               placeholder="Your Message"
               className="bg-white/10 text-white p-3 rounded-md border border-white/10 placeholder:text-white focus:outline-none focus:ring-2 focus:ring-white/20"
             ></textarea>

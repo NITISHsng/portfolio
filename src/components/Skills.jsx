@@ -108,6 +108,8 @@ const Skils = () => {
           ))}
         </div>
       </div>
+      
+      
     </section>
   );
 };

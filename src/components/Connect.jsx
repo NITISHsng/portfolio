@@ -133,12 +133,12 @@ const Connect = () => {
           </p>
         </div>
 
-        <div className="flex flex-col lg:flex-row gap-8 p-5">
+        <div className="flex flex-col lg:flex-row gap-8 p-5 max-w-5xl mx-auto">
           {/* Contact Form */}
           <form
             ref={form}
             onSubmit={sendEmail}
-            className="flex relative flex-col gap-4 w-full lg:w-2/3"
+            className="flex relative flex-col gap-4 w-full lg:w-2/3 max-w-xl mx-auto"
           >
             <input
               type="text"

@@ -63,12 +63,12 @@ const About = () => {
             
             {/* Intro */}
             <div>
-              <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight">
+              <h3 className="text-4xl md:text-5xl font-semibold tracking-tight">
                 Hi, I'm{" "}
                 <span className="bg-gradient-to-r from-cyan-400 to-blue-500 text-transparent bg-clip-text">
                   Nitish
                 </span>
-              </h2>
+              </h3>
               <p className="text-cyan-400 font-medium mt-3 text-lg">
                 Computer Science Student • Full-Stack Developer
               </p>
@@ -107,7 +107,7 @@ const About = () => {
             </div>
 
             {/* Resume Button */}
-            <div>
+            {/* <div>
               <a
                 href="/devnitishx.pdf"
                 target="_blank"
@@ -116,7 +116,7 @@ const About = () => {
               >
                 Download Resume <Download size={18} />
               </a>
-            </div>
+            </div> */}
 
           </div>
         </div>

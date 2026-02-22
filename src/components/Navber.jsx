@@ -131,10 +131,30 @@ const Navbar = () => {
             <li
               key={i}
               className="m-3 pl-5 bg-gray-950 text-white text-2xl rounded-xl p-[10px] md:m-0 md:pl-0 md:bg-transparent md:p-0"
+              onMouseEnter={(e) => {
+                if (window.innerWidth >= 1024) {
+                  gsap.to(e.currentTarget.querySelector("a"), {
+                    scale: 1.1,
+                    color: "#59ff00",
+                    duration: 0.3,
+                    ease: "power2.out",
+                  });
+                }
+              }}
+              onMouseLeave={(e) => {
+                if (window.innerWidth >= 1024) {
+                  gsap.to(e.currentTarget.querySelector("a"), {
+                    scale: 1,
+                    color: "#ffffff",
+                    duration: 0.3,
+                    ease: "power2.in",
+                  });
+                }
+              }}
             >
               <a
                 href={`#${text.toLowerCase()}`}
-                className="text-white no-underline transition-all duration-300 md:hover:bg-white/10 py-1 px-3 rounded-[10px] hover:scale-110 hover:shadow-[0_0_15px_rgba(255,255,255,0.2)] inline-block"
+                className="text-white no-underline transition-all duration-300 py-1 px-3 rounded-[10px] inline-block nav-link-hover"
               >
                 {text}
               </a>
